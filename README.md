@@ -1,3 +1,4 @@
+% % Taken from PIGLE downloaded from GITHUB repo
 % Copyright (c) 2018, Nadav Avidor.
 % All rights reserved.
 % This file is part of the PIGLE - Particles Interacting in Generalized Langevin Equation simulator, subject to the 
