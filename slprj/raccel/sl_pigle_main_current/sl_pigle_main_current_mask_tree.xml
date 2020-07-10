@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/slsa_mm/R2020a">
+  <slsa.mm.MaskTree type="slsa.mm.MaskTree" uuid="7ce3eaee-2ed1-4a29-92d5-bc4435acc411">
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="836ced01-b09d-43ab-b042-0cdfd7a59823">
+      <childrenIds>sl_pigle_main_current:15</childrenIds>
+      <childrenIds>sl_pigle_main_current:16</childrenIds>
+      <childrenIds>sl_pigle_main_current:36</childrenIds>
+      <childrenIds>sl_pigle_main_current:4</childrenIds>
+      <id>root</id>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="77f90f60-d8ab-4113-b710-826c1be89218">
+      <blockPath>sl_pigle_main_current/Population 1/Absolute Position/Permute Matrix</blockPath>
+      <id>sl_pigle_main_current:15</id>
+      <masks type="slsa.mm.Mask" uuid="2e34098e-53d9-471a-b697-d7e049897c5e">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="59211cd4-7268-4462-9891-3f29138e797f">
+          <expression>1</expression>
+          <name>mode</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="5ee32b9b-1ca3-4622-8f48-1d91b636923c">
+          <expression>2</expression>
+          <name>ZeroOneIdxMode</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="3e28fd23-a2d2-4825-b75c-5d149a76c027">
+          <expression>3</expression>
+          <isTunable>true</isTunable>
+          <name>errmode</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="8abab5d4-8979-4f75-be53-8572485dbab0">
+          <expression>1</expression>
+          <name>checkDims</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <initializationCode>modeVal = get_param(gcbh, &apos;mode&apos;);
+</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="24ce7a3f-2055-417c-8246-342d2085b0fb">
+      <blockPath>sl_pigle_main_current/Population 1/Absolute Position/Permute Matrix1</blockPath>
+      <id>sl_pigle_main_current:16</id>
+      <masks type="slsa.mm.Mask" uuid="60520258-9967-45cf-b03e-53f00fdd6113">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="7e228c1d-bc55-4e13-bdfa-3d63b9e6750f">
+          <expression>1</expression>
+          <name>mode</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="0bd1d38b-a113-4a71-a5a5-0187e341cb81">
+          <expression>2</expression>
+          <name>ZeroOneIdxMode</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="e9dc3aea-ebe9-49f1-86e0-a3cec83e6255">
+          <expression>3</expression>
+          <isTunable>true</isTunable>
+          <name>errmode</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="8ea7b004-f6ba-4eef-856b-59a877a2e971">
+          <expression>1</expression>
+          <name>checkDims</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <initializationCode>modeVal = get_param(gcbh, &apos;mode&apos;);
+</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="1aee4f49-67d9-4192-93e0-9fde7d8e53c6">
+      <blockPath>sl_pigle_main_current/Population 1/Delta R/Band-Limited White Noise</blockPath>
+      <id>sl_pigle_main_current:36</id>
+      <masks type="slsa.mm.Mask" uuid="2dc3f19f-cf3f-47f8-8dc6-c90421aa9f9a">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="20428738-695e-4589-85e2-41e13e336cd2">
+          <expression>1</expression>
+          <isTunable>true</isTunable>
+          <name>Cov</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="b38f5ace-57ea-4641-90e8-e0651acee3a4">
+          <expression>params.sample_time</expression>
+          <name>Ts</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="1e1419cd-0de6-4034-bea8-942515748db3">
+          <expression>seed_values_1</expression>
+          <name>seed</name>
+          <refersToVariables>true</refersToVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="9f42aeec-e8b6-4c73-8d18-4812e2f30065">
+          <expression>0</expression>
+          <name>VectorParams1D</name>
+        </dialogParameters>
+        <initializationCode>if any(Cov &lt; 0),
+	error(&apos;The &apos;&apos;Noise power&apos;&apos; must be positive. &apos;),
+end;
+
+r = [-0.4326
+   -1.6656
+    0.1253
+    0.2877
+   -1.1465
+    1.1909
+    1.1892
+   -0.0376
+    0.3273
+    0.1746
+   -0.1867
+    0.7258]&apos;;
+
+r2 = [r(1),r;r,r(12)]; 
+t =[1:13;1:13]; 
+
+if any(Ts==-1), 
+	error(&apos;Sample time (-1) is set to be back-inherited from the block(s) it drives. You should explicitly specify the sample time of the source block. &apos;), 
+end;
+set_param([gcb &apos;/White Noise&apos;],&apos;VectorParams1D&apos;,VectorParams1D);</initializationCode>
+        <referencedGlobalVariableInfo type="slsa.mm.VariableInfo" uuid="a3612638-8435-42d3-8035-9c34a658097b">
+          <name>seed_values_1</name>
+          <workspace>global</workspace>
+        </referencedGlobalVariableInfo>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.MaskedBlock" uuid="b60060ea-b022-4fba-b3f3-0466dc716b48">
+      <blockPath>sl_pigle_main_current/Copyright and Lisence notice</blockPath>
+      <id>sl_pigle_main_current:4</id>
+      <masks type="slsa.mm.Mask" uuid="844185df-7aa7-4ebf-9ec8-9c2a6badb647">
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="b078b8c6-40a9-46b1-9b6b-6495b3ce4bb8">
+          <name>ECoderFlag</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.DialogParameterInfo" uuid="d217b87f-a8fd-40e7-bc45-51b9e52e710d">
+          <expression>1</expression>
+          <name>DocumentType</name>
+        </dialogParameters>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.Variable" uuid="0d1366f1-2320-4b7d-8645-ae6ecd0eae83">
+      <name>seed_values_1</name>
+      <value>AAFJTQAAAAAOAAAA2AAAAAYAAAAIAAAABgAAAAAAAAAFAAAADAAAAAEAAAAKAAAAAgAAAAAAAAABAAAAAAAAAAkAAACgAAAAAAAAACA9+EAAAAAA0ML2QAAAAADAKPNAAAAAACAN8kAAAAAAADnVQAAAAADA3NBAAAAAAGBZ7kAAAAAAoGzgQAAAAADAhNVAAAAAAKAc40AAAAAA8K/yQAAAAAAATM9AAAAAAADV5kAAAAAAQALaQAAAAABg0/ZAAAAAAICy7UAAAAAAQPLjQAAAAAAAWMtAAAAAAABH7kAAAAAAgA3PQA==</value>
+      <workspace>global</workspace>
+    </referencedGlobalWorkspaceVariables>
+  </slsa.mm.MaskTree>
+</MF0>
