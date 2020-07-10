@@ -1,10 +1,10 @@
 
 %% params for surface_params.m
 T=140;
-Nprtcl_total = 10;
-mass_list = [16]; %mass_list = [16 16];
-radius = [0.2]; %radius = [0.2 1.5];
-number_density = [0.1]; %0.01*[2 1];
+Nprtcl_total = 1;
+mass_list = [16]; 
+radius = [0.2]; 
+number_density = [0.1];
 eta =4 ;
 eta_theta = 6;
 tau = [300];

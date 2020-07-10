@@ -7,7 +7,7 @@ dKz_include_in_isf = 0;
 theta_enabled = 0;
 zero_p_init = 1; % set initial momentum be set to zero? (if set to 0, p_init will correspond to thermal distribution)
 interactions_active = 0;
-N_runs = 10;
+N_runs = 1;
 run_parallel = 0;
 
 % Specify dK as a 2D vector, 3rd dim is azimuths.
@@ -21,11 +21,11 @@ beam_ki = 3.3977; % ANgstrom ^{-1}
 
 % Specify simulation time parameters
 % (those will be adjusted by the program, see below if interested)
-sample_time = 1e-4;
-sample_time_clist = 1e-3;
-isf_sample_time = 1e-3;
+sample_time = 1e-3;
+sample_time_clist = 1e-2;
+isf_sample_time = 5e-2;
 thermalizing_time = 50;
-stop_time = 64*0.1;
+stop_time = 1024;
 
 % N_steps and N_ISF_steps are calculated after PIGLE adjusts the requested time parameters
 max_N_steps = 1e9;

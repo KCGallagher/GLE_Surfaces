@@ -134,10 +134,10 @@ disp('PIGLE: save done')
 
 if toPlot && isISF
     % Plot the data:
-    figure; for i=1:size(dK,2), plot(params.t_isf',real(isf_c(i,:,1))); hold on; end
+    figure; for i=1:size(dK,2), plot(params.t_isf',real(isf_c_CoM(i,:,1))); hold on; end
     
     xlabel('t / ps'); ylabel('Normalised ISF'); title('Coherent ISF, 1st azimuth')
-    figure; for i=1:size(dK,2), plot(params.t_isf',real(isf_inc(i,:,1))); hold on; end
+    figure; for i=1:size(dK,2), plot(params.t_isf',real(isf_inc_CoM(i,:,1))); hold on; end
     xlabel('t / ps'); ylabel('Normalised ISF'); title('Incoherent ISF, 1st azimuth')
 end
 
