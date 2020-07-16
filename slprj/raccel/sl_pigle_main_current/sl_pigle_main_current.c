@@ -309,9 +309,9 @@ sl_pigle_main_current_InitializeDataMapInfo ( ) ;
 ssSetIsRapidAcceleratorActive ( rtS , true ) ; ssSetRootSS ( rtS , rtS ) ;
 ssSetVersion ( rtS , SIMSTRUCT_VERSION_LEVEL2 ) ; ssSetModelName ( rtS ,
 "sl_pigle_main_current" ) ; ssSetPath ( rtS , "sl_pigle_main_current" ) ;
-ssSetTStart ( rtS , 0.0 ) ; ssSetTFinal ( rtS , 1688.3500000000001 ) ; {
-static RTWLogInfo rt_DataLoggingInfo ; rt_DataLoggingInfo . loggingInterval =
-NULL ; ssSetRTWLogInfo ( rtS , & rt_DataLoggingInfo ) ; } { { static int_T
+ssSetTStart ( rtS , 0.0 ) ; ssSetTFinal ( rtS , 62.75 ) ; { static RTWLogInfo
+rt_DataLoggingInfo ; rt_DataLoggingInfo . loggingInterval = NULL ;
+ssSetRTWLogInfo ( rtS , & rt_DataLoggingInfo ) ; } { { static int_T
 rt_LoggedStateWidths [ ] = { 1 , 1 , 1 , 1 } ; static int_T
 rt_LoggedStateNumDimensions [ ] = { 1 , 1 , 1 , 1 } ; static int_T
 rt_LoggedStateDimensions [ ] = { 1 , 1 , 1 , 1 } ; static boolean_T

@@ -60,8 +60,8 @@ mmiStaticInfoLogging = { 2 , rtContextSystems , loggingMetaInfo , 0 , NULL ,
 mmiStatic = { { rtBlockSignals , 0 , ( NULL ) , 0 , ( NULL ) , 0 } , { ( NULL
 ) , 0 , ( NULL ) , 0 } , { rtBlockStates , 1 } , { rtDataTypeMap ,
 rtDimensionMap , rtFixPtMap , rtElementMap , rtSampleTimeMap ,
-rtDimensionArray } , "float" , { 2594931521U , 370506029U , 2981253225U ,
-4063631087U } , & mmiStaticInfoLogging , 0 , 0 } ; const
+rtDimensionArray } , "float" , { 853929455U , 3540679458U , 890670798U ,
+1555757085U } , & mmiStaticInfoLogging , 0 , 0 } ; const
 rtwCAPI_ModelMappingStaticInfo *
 frmBuilder_sl_interactions_with_sfun_GetCAPIStaticMap ( void ) { return &
 mmiStatic ; }

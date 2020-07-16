@@ -84,8 +84,8 @@ oprbpyox5h ( void ) {
 mr_frmBuilder_sl_interactions_with_sfun_CreateInitRestoreData ( ) ; } void
 lq4m2waf4b ( void ) { m32tjzplay ( ) ; } void ok2e3i11k4 ( void ) {
 j11jtsqnt5 ( ) ; } void eieawr5uet ( void ) { mabwddym1e ( ) ; } void
-sl_interactions ( const real_T bafzp4oan5 [ 6 ] , const real_T cmsyokckit [ 3
-] , const real_T j1ft5dukee [ 3 ] , real_T o4tj5ap432 [ 6 ] ) {
+sl_interactions ( const real_T bafzp4oan5 [ 4 ] , const real_T cmsyokckit [ 2
+] , const real_T j1ft5dukee [ 2 ] , real_T o4tj5ap432 [ 4 ] ) {
 frmBuilder_sl_interactions_with_sfun ( & bafzp4oan5 [ 0 ] , & cmsyokckit [ 0
 ] , & j1ft5dukee [ 0 ] , & o4tj5ap432 [ 0 ] ) ; } void sl_interactionsTID1 (
 void ) { frmBuilder_sl_interactions_with_sfunTID1 ( ) ; } void ogxwx0k0re (
@@ -185,8 +185,8 @@ rtdwData , 0 , 0 , varData ) ; } mxSetFieldByNumber ( ssDW , 0 , 1 , rtdwData
 0 , 1 ) ; mr_frmBuilder_sl_interactions_with_sfun_SetDWork (
 mxGetFieldByNumber ( rtdwData , 0 , 0 ) ) ; } } void
 mr_sl_interactions_RegisterSimStateChecksum ( SimStruct * S ) { const
-uint32_T chksum [ 4 ] = { 1082972782U , 1396259819U , 3009245213U ,
-1570745557U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
+uint32_T chksum [ 4 ] = { 1167906785U , 3484920170U , 1884108696U ,
+2885899711U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
 "sl_interactions" , & chksum [ 0 ] ) ;
 mr_frmBuilder_sl_interactions_with_sfun_RegisterSimStateChecksum ( S ) ; }
 mxArray * mr_sl_interactions_GetSimStateDisallowedBlocks ( ) { return

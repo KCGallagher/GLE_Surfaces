@@ -32,8 +32,8 @@ extern void oprbpyox5h ( void ) ; extern void lq4m2waf4b ( void ) ; extern
 void ok2e3i11k4 ( void ) ; extern void f04maqikgc ( void ) ; extern void
 eieawr5uet ( void ) ; extern void ogxwx0k0re ( void ) ; extern void
 ogxwx0k0reTID1 ( void ) ; extern void sl_interactions ( const real_T
-bafzp4oan5 [ 6 ] , const real_T cmsyokckit [ 3 ] , const real_T j1ft5dukee [
-3 ] , real_T o4tj5ap432 [ 6 ] ) ; extern void sl_interactionsTID1 ( void ) ;
+bafzp4oan5 [ 4 ] , const real_T cmsyokckit [ 2 ] , const real_T j1ft5dukee [
+2 ] , real_T o4tj5ap432 [ 4 ] ) ; extern void sl_interactionsTID1 ( void ) ;
 extern void jnbmdmhdqg ( void ) ; extern void dtonp0nc4x ( SimStruct *
 _mdlRefSfcnS , int_T mdlref_TID0 , int_T mdlref_TID1 , void * sysRanPtr , int
 contextTid , rtwCAPI_ModelMappingInfo * rt_ParentMMI , const char_T *

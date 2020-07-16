@@ -15,20 +15,20 @@
 #include "multiword_types.h"
 #include "rt_nonfinite.h"
 #ifndef frmBuilder_sl_interactions_with_sfun_MDLREF_HIDE_CHILD_
-typedef struct { int32_T azbn531qjq ; int32_T jgnha030ci [ 3 ] ; int32_T
-ei4032pt0e [ 9 ] ; int32_T lrfm0b02de [ 9 ] ; int32_T ai241u2zr3 [ 3 ] ;
+typedef struct { int32_T azbn531qjq ; int32_T jgnha030ci [ 2 ] ; int32_T
+ei4032pt0e [ 4 ] ; int32_T lrfm0b02de [ 4 ] ; int32_T ai241u2zr3 [ 2 ] ;
 uint8_T prlrkaw5tq ; } ccjhnjujtlv ;
 #endif
 #ifndef frmBuilder_sl_interactions_with_sfun_MDLREF_HIDE_CHILD_
-typedef struct { int32_T hrg1yp121u [ 9 ] ; int32_T e5p42cabpk [ 3 ] ;
+typedef struct { int32_T hrg1yp121u [ 4 ] ; int32_T e5p42cabpk [ 2 ] ;
 uint8_T elmzpr4w3v ; } h5jqgwghrry ;
 #endif
 #ifndef frmBuilder_sl_interactions_with_sfun_MDLREF_HIDE_CHILD_
 struct gwksvzrwlpk_ { uint8_T P_0 ; real_T P_1 [ 2 ] ; real_T P_2 ; real_T
 P_3 ; real_T P_4 [ 2 ] ; real_T P_5 ; real_T P_6 [ 1500 ] ; real_T P_7 ;
 real_T P_8 [ 2 ] ; real_T P_9 [ 3 ] ; real_T P_10 [ 6 ] ; real_T P_11 ;
-real_T P_12 ; real_T P_13 [ 500 ] ; real_T P_14 ; int32_T P_15 [ 9 ] ;
-int32_T P_16 [ 3 ] ; uint8_T P_17 ; uint8_T P_18 ; uint8_T P_19 ; } ;
+real_T P_12 ; real_T P_13 [ 500 ] ; real_T P_14 ; int32_T P_15 [ 4 ] ;
+int32_T P_16 [ 2 ] ; uint8_T P_17 ; uint8_T P_18 ; uint8_T P_19 ; } ;
 #endif
 #ifndef frmBuilder_sl_interactions_with_sfun_MDLREF_HIDE_CHILD_
 struct b0bec2mpit { struct SimStruct_tag * _mdlRefSfcnS ; struct {
@@ -44,8 +44,8 @@ typedef struct { e45f22iatl rtm ; } k5qqqu40mr1 ;
 extern void m32tjzplay ( void ) ; extern void j11jtsqnt5 ( void ) ; extern
 void mabwddym1e ( void ) ; extern void owuiqr2hmo ( void ) ; extern void
 owuiqr2hmoTID1 ( void ) ; extern void frmBuilder_sl_interactions_with_sfun (
-const real_T bvdsahax1j [ 6 ] , const real_T mni4apbri4 [ 3 ] , const real_T
-pjhb1fxiur [ 3 ] , real_T goidetzxg5 [ 6 ] ) ; extern void
+const real_T bvdsahax1j [ 4 ] , const real_T mni4apbri4 [ 2 ] , const real_T
+pjhb1fxiur [ 2 ] , real_T goidetzxg5 [ 4 ] ) ; extern void
 frmBuilder_sl_interactions_with_sfunTID1 ( void ) ; extern void ltlv1eutbt (
 void ) ; extern void dzwufxgfur ( SimStruct * _mdlRefSfcnS , int_T
 mdlref_TID0 , int_T mdlref_TID1 , void * sysRanPtr , int contextTid ,

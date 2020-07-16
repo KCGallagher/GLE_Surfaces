@@ -125,7 +125,7 @@ MDL_INFO_ID_MODEL_FCN_NAME , 0 , - 1 , ( void * )
 , ( NULL ) } , { "frmBuilder_sl_interactions_with_sfun.c" ,
 MDL_INFO_MODEL_FILENAME , 0 , - 1 , ( void * )
 "frmBuilder_sl_interactions_with_sfun" } } ; gwksvzrwlpk ijenrg2bfj = { 9U ,
-{ 23.003809937595118 , 35.416682292953411 } , 49.0 , 3.0 , { 500.0 , 3.0 } ,
+{ 5.1119577639100262 , 8.8541705732383527 } , 49.0 , 2.0 , { 500.0 , 3.0 } ,
 2.0 , { - 2.9034039652098848E+27 , - 1.8053482216153859E+21 , -
 2.3538211158808996E+18 , - 2.9633683859447648E+16 , - 1.1290851236461713E+15
 , - 8.3110512425376109E+13 , - 9.471259743270625E+12 , -
@@ -627,8 +627,8 @@ MDL_INFO_MODEL_FILENAME , 0 , - 1 , ( void * )
 2.6300366697200734E-5 , 2.5927317688203954E-5 , 2.5560303743191195E-5 ,
 2.5199215246626594E-5 , 2.4843944790690838E-5 , 2.4494387126468468E-5 ,
 2.4150439116310317E-5 , 2.3811999687340107E-5 , 2.3478969786076125E-5 ,
-2.3151252334138304E-5 , 2.2828752185013283E-5 } , 1.0 , { 23.003809937595118
-, 35.416682292953411 } , { 1.0 , 1.0 , 1.0 } , { 1.0 , 1.0 , 2.0 , 1.0 , 2.0
+2.3151252334138304E-5 , 2.2828752185013283E-5 } , 1.0 , { 5.1119577639100262
+, 8.8541705732383527 } , { 1.0 , 1.0 , 1.0 } , { 1.0 , 1.0 , 2.0 , 1.0 , 2.0
 , 2.0 } , 0.5 , 49.0 , { 0.05 , 0.15010020040080163 , 0.25020040080160322 ,
 0.35030060120240486 , 0.45040080160320645 , 0.55050100200400809 ,
 0.65060120240480979 , 0.75070140280561137 , 0.850801603206413 ,
@@ -793,33 +793,36 @@ MDL_INFO_MODEL_FILENAME , 0 , - 1 , ( void * )
 48.898897795591182 , 48.998997995991985 , 49.099098196392781 ,
 49.199198396793584 , 49.299298597194387 , 49.39939879759519 ,
 49.499498997995993 , 49.599599198396788 , 49.699699398797591 ,
-49.799799599198394 , 49.8998997995992 , 50.0 } , 0.0 , { 0 , 0 , 0 , 0 , 0 ,
-0 , 0 , 0 , 0 } , { 0 , 0 , 0 } , 0U , 1U , 0U } ; k5qqqu40mr1 k5qqqu40mr ;
-ccjhnjujtlv n0swlirknlw ; h5jqgwghrry lwptvauccs5 ; void m32tjzplay ( void )
-{ lwptvauccs5 . elmzpr4w3v = ijenrg2bfj . P_17 ; } void j11jtsqnt5 ( void ) {
-lwptvauccs5 . elmzpr4w3v = ijenrg2bfj . P_17 ; } void mabwddym1e ( void ) {
-int32_T i ; for ( i = 0 ; i < 9 ; i ++ ) { lwptvauccs5 . hrg1yp121u [ i ] =
-ijenrg2bfj . P_15 [ i ] ; } lwptvauccs5 . e5p42cabpk [ 0 ] = ijenrg2bfj .
-P_16 [ 0 ] ; lwptvauccs5 . e5p42cabpk [ 1 ] = ijenrg2bfj . P_16 [ 1 ] ;
-lwptvauccs5 . e5p42cabpk [ 2 ] = ijenrg2bfj . P_16 [ 2 ] ; } void
-frmBuilder_sl_interactions_with_sfun ( const real_T bvdsahax1j [ 6 ] , const
-real_T mni4apbri4 [ 3 ] , const real_T pjhb1fxiur [ 3 ] , real_T goidetzxg5 [
-6 ] ) { uint8_T n4irik3wix ; int32_T i ; n0swlirknlw . azbn531qjq =
-lwptvauccs5 . elmzpr4w3v ; frmBuilder_sfun_setclist_Outputs_wrapper ( &
-bvdsahax1j [ 0 ] , & n0swlirknlw . azbn531qjq , & n0swlirknlw . jgnha030ci [
-0 ] , & n0swlirknlw . ei4032pt0e [ 0 ] , ijenrg2bfj . P_1 , 2 , & ijenrg2bfj
-. P_2 , 1 ) ; for ( i = 0 ; i < 9 ; i ++ ) { lwptvauccs5 . hrg1yp121u [ i ] =
-n0swlirknlw . ei4032pt0e [ i ] ; } lwptvauccs5 . e5p42cabpk [ 0 ] =
-n0swlirknlw . jgnha030ci [ 0 ] ; lwptvauccs5 . e5p42cabpk [ 1 ] = n0swlirknlw
-. jgnha030ci [ 1 ] ; lwptvauccs5 . e5p42cabpk [ 2 ] = n0swlirknlw .
-jgnha030ci [ 2 ] ; n4irik3wix = ( uint8_T ) ( ( uint32_T ) lwptvauccs5 .
-elmzpr4w3v + ijenrg2bfj . P_18 ) ; if ( n4irik3wix > ijenrg2bfj . P_0 ) {
-n0swlirknlw . prlrkaw5tq = ijenrg2bfj . P_19 ; } else { n0swlirknlw .
-prlrkaw5tq = n4irik3wix ; } for ( i = 0 ; i < 9 ; i ++ ) { n0swlirknlw .
-lrfm0b02de [ i ] = lwptvauccs5 . hrg1yp121u [ i ] ; } n0swlirknlw .
+49.799799599198394 , 49.8998997995992 , 50.0 } , 0.0 , { 0 , 0 , 0 , 0 } , {
+0 , 0 } , 0U , 1U , 0U } ; k5qqqu40mr1 k5qqqu40mr ; ccjhnjujtlv n0swlirknlw ;
+h5jqgwghrry lwptvauccs5 ; void m32tjzplay ( void ) { lwptvauccs5 . elmzpr4w3v
+= ijenrg2bfj . P_17 ; } void j11jtsqnt5 ( void ) { lwptvauccs5 . elmzpr4w3v =
+ijenrg2bfj . P_17 ; } void mabwddym1e ( void ) { lwptvauccs5 . hrg1yp121u [ 0
+] = ijenrg2bfj . P_15 [ 0 ] ; lwptvauccs5 . hrg1yp121u [ 1 ] = ijenrg2bfj .
+P_15 [ 1 ] ; lwptvauccs5 . hrg1yp121u [ 2 ] = ijenrg2bfj . P_15 [ 2 ] ;
+lwptvauccs5 . hrg1yp121u [ 3 ] = ijenrg2bfj . P_15 [ 3 ] ; lwptvauccs5 .
+e5p42cabpk [ 0 ] = ijenrg2bfj . P_16 [ 0 ] ; lwptvauccs5 . e5p42cabpk [ 1 ] =
+ijenrg2bfj . P_16 [ 1 ] ; } void frmBuilder_sl_interactions_with_sfun ( const
+real_T bvdsahax1j [ 4 ] , const real_T mni4apbri4 [ 2 ] , const real_T
+pjhb1fxiur [ 2 ] , real_T goidetzxg5 [ 4 ] ) { uint8_T n4irik3wix ;
+n0swlirknlw . azbn531qjq = lwptvauccs5 . elmzpr4w3v ;
+frmBuilder_sfun_setclist_Outputs_wrapper ( & bvdsahax1j [ 0 ] , & n0swlirknlw
+. azbn531qjq , & n0swlirknlw . jgnha030ci [ 0 ] , & n0swlirknlw . ei4032pt0e
+[ 0 ] , ijenrg2bfj . P_1 , 2 , & ijenrg2bfj . P_2 , 1 ) ; lwptvauccs5 .
+hrg1yp121u [ 0 ] = n0swlirknlw . ei4032pt0e [ 0 ] ; lwptvauccs5 . hrg1yp121u
+[ 1 ] = n0swlirknlw . ei4032pt0e [ 1 ] ; lwptvauccs5 . hrg1yp121u [ 2 ] =
+n0swlirknlw . ei4032pt0e [ 2 ] ; lwptvauccs5 . hrg1yp121u [ 3 ] = n0swlirknlw
+. ei4032pt0e [ 3 ] ; lwptvauccs5 . e5p42cabpk [ 0 ] = n0swlirknlw .
+jgnha030ci [ 0 ] ; lwptvauccs5 . e5p42cabpk [ 1 ] = n0swlirknlw . jgnha030ci
+[ 1 ] ; n4irik3wix = ( uint8_T ) ( ( uint32_T ) lwptvauccs5 . elmzpr4w3v +
+ijenrg2bfj . P_18 ) ; if ( n4irik3wix > ijenrg2bfj . P_0 ) { n0swlirknlw .
+prlrkaw5tq = ijenrg2bfj . P_19 ; } else { n0swlirknlw . prlrkaw5tq =
+n4irik3wix ; } n0swlirknlw . lrfm0b02de [ 0 ] = lwptvauccs5 . hrg1yp121u [ 0
+] ; n0swlirknlw . lrfm0b02de [ 1 ] = lwptvauccs5 . hrg1yp121u [ 1 ] ;
+n0swlirknlw . lrfm0b02de [ 2 ] = lwptvauccs5 . hrg1yp121u [ 2 ] ; n0swlirknlw
+. lrfm0b02de [ 3 ] = lwptvauccs5 . hrg1yp121u [ 3 ] ; n0swlirknlw .
 ai241u2zr3 [ 0 ] = lwptvauccs5 . e5p42cabpk [ 0 ] ; n0swlirknlw . ai241u2zr3
-[ 1 ] = lwptvauccs5 . e5p42cabpk [ 1 ] ; n0swlirknlw . ai241u2zr3 [ 2 ] =
-lwptvauccs5 . e5p42cabpk [ 2 ] ;
+[ 1 ] = lwptvauccs5 . e5p42cabpk [ 1 ] ;
 frmBuilder_sfun_intrAdsrbtFrcs_Outputs_wrapper ( & bvdsahax1j [ 0 ] , &
 ijenrg2bfj . P_13 [ 0 ] , & ijenrg2bfj . P_6 [ 0 ] , & ijenrg2bfj . P_8 [ 0 ]
 , & mni4apbri4 [ 0 ] , & ijenrg2bfj . P_10 [ 0 ] , & ijenrg2bfj . P_9 [ 0 ] ,
@@ -947,8 +950,8 @@ mr_frmBuilder_sl_interactions_with_sfun_restoreDataFromMxArray ( & (
 lwptvauccs5 . elmzpr4w3v ) , rtdwData , 0 , 2 , sizeof ( lwptvauccs5 .
 elmzpr4w3v ) ) ; } } void
 mr_frmBuilder_sl_interactions_with_sfun_RegisterSimStateChecksum ( SimStruct
-* S ) { const uint32_T chksum [ 4 ] = { 2604566078U , 2858302984U ,
-748575565U , 1322570080U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
+* S ) { const uint32_T chksum [ 4 ] = { 86589401U , 1280604005U , 1581376556U
+, 448651767U , } ; slmrModelRefRegisterSimStateChecksum ( S ,
 "frmBuilder_sl_interactions_with_sfun" , & chksum [ 0 ] ) ; } mxArray *
 mr_frmBuilder_sl_interactions_with_sfun_GetSimStateDisallowedBlocks ( ) {
 return NULL ; } static void *

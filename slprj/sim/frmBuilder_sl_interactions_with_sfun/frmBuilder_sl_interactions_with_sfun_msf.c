@@ -48,7 +48,7 @@ NULL ) ) { _GenericFcn fcn = S -> mdlInfo -> genericFcn ; }
 ssSetRTWGeneratedSFcn ( S , 2 ) ; ssSetNumContStates ( S , 0 ) ;
 ssSetNumDiscStates ( S , 0 ) ; slmrInitializeIOPortDataVectors ( S , 3 , 1 )
 ; if ( ! ssSetNumInputPorts ( S , 3 ) ) return ; if ( !
-ssSetInputPortMatrixDimensions ( S , 0 , 2 , 3 ) ) return ;
+ssSetInputPortMatrixDimensions ( S , 0 , 2 , 2 ) ) return ;
 ssSetInputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
 ssSetInputPortFrameData ( S , 0 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
 SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetInputPortDataType ( S , 0 , SS_DOUBLE ) ;
@@ -62,7 +62,7 @@ unitIdReg ) ;
 ssSetInputPortRequiredContiguous ( S , 0 , 1 ) ; ssSetInputPortOptimOpts ( S
 , 0 , SS_NOT_REUSABLE_AND_GLOBAL ) ; ssSetInputPortOverWritable ( S , 0 ,
 false ) ; ssSetInputPortSampleTime ( S , 0 , - 1 ) ; if ( !
-ssSetInputPortMatrixDimensions ( S , 1 , 1 , 3 ) ) return ;
+ssSetInputPortMatrixDimensions ( S , 1 , 1 , 2 ) ) return ;
 ssSetInputPortDimensionsMode ( S , 1 , FIXED_DIMS_MODE ) ;
 ssSetInputPortFrameData ( S , 1 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
 SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetInputPortDataType ( S , 1 , SS_DOUBLE ) ;
@@ -76,7 +76,7 @@ unitIdReg ) ;
 ssSetInputPortRequiredContiguous ( S , 1 , 1 ) ; ssSetInputPortOptimOpts ( S
 , 1 , SS_NOT_REUSABLE_AND_GLOBAL ) ; ssSetInputPortOverWritable ( S , 1 ,
 false ) ; ssSetInputPortSampleTime ( S , 1 , - 1 ) ; if ( !
-ssSetInputPortMatrixDimensions ( S , 2 , 1 , 3 ) ) return ;
+ssSetInputPortMatrixDimensions ( S , 2 , 1 , 2 ) ) return ;
 ssSetInputPortDimensionsMode ( S , 2 , FIXED_DIMS_MODE ) ;
 ssSetInputPortFrameData ( S , 2 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
 SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetInputPortDataType ( S , 2 , SS_DOUBLE ) ;
@@ -91,7 +91,7 @@ ssSetInputPortRequiredContiguous ( S , 2 , 1 ) ; ssSetInputPortOptimOpts ( S
 , 2 , SS_NOT_REUSABLE_AND_GLOBAL ) ; ssSetInputPortOverWritable ( S , 2 ,
 false ) ; ssSetInputPortSampleTime ( S , 2 , - 1 ) ; if ( !
 ssSetNumOutputPorts ( S , 1 ) ) return ; if ( !
-ssSetOutputPortMatrixDimensions ( S , 0 , 2 , 3 ) ) return ;
+ssSetOutputPortMatrixDimensions ( S , 0 , 2 , 2 ) ) return ;
 ssSetOutputPortDimensionsMode ( S , 0 , FIXED_DIMS_MODE ) ;
 ssSetOutputPortFrameData ( S , 0 , FRAME_NO ) ; if ( ssGetSimMode ( S ) !=
 SS_SIMMODE_SIZES_CALL_ONLY ) { ssSetOutputPortDataType ( S , 0 , SS_DOUBLE )
@@ -120,7 +120,7 @@ USE_DEFAULT_FOR_DISCRETE_INHERITANCE ) ; ssSetAcceptsFcnCallInputs ( S ) ;
 ssSetModelReferenceNormalModeSupport ( S ,
 MDL_START_AND_MDL_PROCESS_PARAMS_OK ) ; ssSupportsMultipleExecInstances ( S ,
 false ) ; ssRegisterMsgForNotSupportingMultiExecInst ( S ,
- "<diag_root><diag id=\"Simulink:blocks:UserSFcnBlockDoesNotSupportMultiExecInstances\" pr=\"d\"><arguments><arg type=\"encoded\">ZgByAG0AQgB1AGkAbABkAGUAcgBfAHMAbABfAGkAbgB0AGUAcgBhAGMAdABpAG8AbgBzAF8AdwBpAHQAaABfAHMAZgB1AG4ALwBTAC0ARgB1AG4AYwB0AGkAbwBuACAAQgB1AGkAbABkAGUAcgAyAAAA</arg><arg type=\"encoded\">PABfAF8AaQBpAFMAUwBfAF8APgA8AC8AXwBfAGkAaQBTAFMAXwBfAD4AAAA=</arg><arg type=\"encoded\">PABfAF8AaQB0AGUAcgBCAGwAawBfAF8APgA8AC8AXwBfAGkAdABlAHIAQgBsAGsAXwBfAD4AAAA=</arg></arguments><hs><h>AAAAgAWwd0D+</h></hs></diag></diag_root>"
+ "<diag_root><diag id=\"Simulink:blocks:UserSFcnBlockDoesNotSupportMultiExecInstances\" pr=\"d\"><arguments><arg type=\"encoded\">ZgByAG0AQgB1AGkAbABkAGUAcgBfAHMAbABfAGkAbgB0AGUAcgBhAGMAdABpAG8AbgBzAF8AdwBpAHQAaABfAHMAZgB1AG4ALwBTAC0ARgB1AG4AYwB0AGkAbwBuACAAQgB1AGkAbABkAGUAcgAyAAAA</arg><arg type=\"encoded\">PABfAF8AaQBpAFMAUwBfAF8APgA8AC8AXwBfAGkAaQBTAFMAXwBfAD4AAAA=</arg><arg type=\"encoded\">PABfAF8AaQB0AGUAcgBCAGwAawBfAF8APgA8AC8AXwBfAGkAdABlAHIAQgBsAGsAXwBfAD4AAAA=</arg></arguments><hs><h>AAAAAG2wd0D+</h></hs></diag></diag_root>"
 ) ; ssHasStateInsideForEachSS ( S , false ) ; ssSetOptions ( S ,
 SS_OPTION_ALLOW_CONSTANT_PORT_SAMPLE_TIME |
 SS_OPTION_PORT_SAMPLE_TIMES_ASSIGNED |
