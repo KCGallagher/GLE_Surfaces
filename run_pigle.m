@@ -140,7 +140,7 @@ if toPlot && isISF
     xlabel('t / ps'); ylabel('Normalised ISF'); title('Incoherent ISF, 1st azimuth')
 end
 
-if True
+if false
     %to plot trajectory:
     Ang = char(197);
     figure; plot(squeeze(data.prtcl.r(1,1,:)),squeeze(data.prtcl.r(2,1,:)))
@@ -149,8 +149,7 @@ if True
     %figure; for i=1:Nprtcl_total, plot(squeeze(data.prtcl.r(1,i,:)),squeeze(data.prtcl.r(2,i,:))); hold on; end
 
     time = (0: isf_sample_time: stop_time - isf_sample_time);
-    figure; 
-    plot(time, squeeze(vecnorm(data.prtcl.r - data.prtcl.r(:,1,1))))
+    figure; plot(time, squeeze(vecnorm(data.prtcl.r - data.prtcl.r(:,1,1))))
     xlabel('Time (ps)'); ylabel(['Displacement (' Ang ')']) 
     %xlim([0 100])
     set(gca,'FontSize',14) %use for subplots in latex report

@@ -41,7 +41,7 @@ params.stop_time = stop_time;
 
 % Specify dK as a 2D vector, 3rd dim is azimuths.
 params.dK(:,:,1) = azim_1.*dK';
-params.dK(:,:,2) = azim_2.*dK';
+%params.dK(:,:,2) = azim_2.*dK'; %commented as second azimuth is removed
 
 % beam props and total scattering angle
 params.beam_ki                = beam_ki;

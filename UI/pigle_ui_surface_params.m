@@ -1,6 +1,6 @@
 
 %% params for surface_params.m
-T=280;
+T=200;
 Nprtcl_total = 1;
 mass_list = [7]; 
 radius = [0.2]; 
