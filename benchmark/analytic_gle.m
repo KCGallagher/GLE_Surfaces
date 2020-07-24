@@ -6,7 +6,6 @@
 function isf=analytic_gle(DK,time,gamma,wD,kb,T,m)
 
 % Computes analytic ISF for particle obeying GLE on flat surface.
-
 C=wD-gamma;
 S=sqrt(wD)*(wD-3*gamma)/sqrt(wD-4*gamma);
 omega=0.5*sqrt(wD^2-4*gamma*wD);

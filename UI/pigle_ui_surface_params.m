@@ -1,13 +1,13 @@
 
 %% params for surface_params.m
-T=200;
+T=140;
 Nprtcl_total = 1;
 mass_list = [7]; 
 radius = [0.2]; 
 number_density = [0.1];
-eta =5 ;
+eta =200 ;
 eta_theta = 6;
-tau = [1];
+tau = 5;
 
 a1=3.6147/sqrt(2);                          % Copper 111 lattice constant in Angstrom
 %a1=2.71;                          % Ru 0001 lattice constant in Angstrom

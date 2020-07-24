@@ -194,7 +194,7 @@ rtwCAPI_MATRIX_COL_MAJOR , 6 , 2 , 0 } , { rtwCAPI_VECTOR , 8 , 2 , 0 } , {
 rtwCAPI_VECTOR , 10 , 2 , 0 } , { rtwCAPI_MATRIX_COL_MAJOR_ND , 12 , 3 , 0 }
 } ; static const uint_T rtDimensionArray [ ] = { 2 , 1 , 1 , 1 , 1 , 2 , 50 ,
 30 , 1 , 50 , 1 , 30 , 1 , 1 , 2 } ; static const real_T rtcapiStoredFloats [
-] = { 0.001 , 0.0 } ; static const rtwCAPI_FixPtMap rtFixPtMap [ ] = { { (
+] = { 2.0E-5 , 0.0 } ; static const rtwCAPI_FixPtMap rtFixPtMap [ ] = { { (
 NULL ) , ( NULL ) , rtwCAPI_FIX_RESERVED , 0 , 0 , 0 } , } ; static const
 rtwCAPI_SampleTimeMap rtSampleTimeMap [ ] = { { ( NULL ) , ( NULL ) , 2 , 0 }
 , { ( const void * ) & rtcapiStoredFloats [ 0 ] , ( const void * ) &
@@ -202,8 +202,8 @@ rtcapiStoredFloats [ 1 ] , 1 , 0 } } ; static rtwCAPI_ModelMappingStaticInfo
 mmiStatic = { { rtBlockSignals , 20 , ( NULL ) , 0 , ( NULL ) , 0 } , {
 rtBlockParameters , 42 , rtModelParameters , 1 } , { ( NULL ) , 0 } , {
 rtDataTypeMap , rtDimensionMap , rtFixPtMap , rtElementMap , rtSampleTimeMap
-, rtDimensionArray } , "float" , { 4043941710U , 3992423482U , 1901846723U ,
-2406263254U } , ( NULL ) , 0 , 0 } ; const rtwCAPI_ModelMappingStaticInfo *
+, rtDimensionArray } , "float" , { 1797516055U , 1455765115U , 654015503U ,
+3858682458U } , ( NULL ) , 0 , 0 } ; const rtwCAPI_ModelMappingStaticInfo *
 sl_pigle_main_current_GetCAPIStaticMap ( void ) { return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD
 void sl_pigle_main_current_InitializeDataMapInfo ( void ) {

@@ -9,8 +9,8 @@ pot_strct(1).ref_De = [1600 1600 1600 1600 1600 1600]*0;
 % pot_strct(1).V = [0 45 ; 0.5 0.5; 0.5 0.5; 80 100 ; 80 100 ; 80 100 ]*1; % top, slope1,slop2,bridge,hcp,fcc
 % pot_strct(1).V = [0 ; 0.5 ;  0.5; 250 ; 210 ; 60 ]*1; % top, slope1,slop2,bridge,hcp,fcc
 % pot_strct(1).V = [250 ; 0.5 ; 0.5 ; 110 ; 22 ; 0]; % top, slope1,slop2,bridge,hcp,fcc
-pot_strct(1).V = [200 ; 0.1 ; 0.1 ; 5   ; 5  ;50]; %top,slope1,slop2,bridge,hcp,fcc DEFAULT
-%pot_strct(1).V = [0;0;0;0;0;0]; % top, slope1,slop2,bridge,hcp,fcc, NO POTENTIAL
+%pot_strct(1).V = [200 ; 0.1 ; 0.1 ; 5   ; 5  ;50]; %top,slope1,slop2,bridge,hcp,fcc DEFAULT
+pot_strct(1).V = [0;0;0;0;0;0]; % top, slope1,slop2,bridge,hcp,fcc, NO POTENTIAL
 
 pot_strct(1).is_potval = [1 0 0 1 1 1];
 pot_strct(1).a = [1 NaN NaN 1 1 1]*1;

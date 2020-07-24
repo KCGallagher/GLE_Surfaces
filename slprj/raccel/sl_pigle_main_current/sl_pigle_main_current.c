@@ -147,22 +147,22 @@ externalInputIsInDatasetFormat ) { } } { int_T dimensions [ 2 ] = { 1 , 1 } ;
 rtDW . c43cp3qtjl . LoggedData = rt_CreateLogVar ( ssGetRTWLogInfo ( rtS ) ,
 ssGetTStart ( rtS ) , ssGetTFinal ( rtS ) , 0.0 , ( & ssGetErrorStatus ( rtS
 ) ) , "freeze_1" , SS_DOUBLE , 0 , 0 , 0 , 1 , 2 , dimensions , NO_LOGVALDIMS
-, ( NULL ) , ( NULL ) , 0 , 50 , rtInf , 1 ) ; if ( rtDW . c43cp3qtjl .
+, ( NULL ) , ( NULL ) , 0 , 5 , rtInf , 1 ) ; if ( rtDW . c43cp3qtjl .
 LoggedData == ( NULL ) ) return ; } { int_T dimensions [ 2 ] = { 2 , 1 } ;
 rtDW . ml3whhvhfc . LoggedData = rt_CreateLogVar ( ssGetRTWLogInfo ( rtS ) ,
 ssGetTStart ( rtS ) , ssGetTFinal ( rtS ) , 0.0 , ( & ssGetErrorStatus ( rtS
 ) ) , "p1" , SS_DOUBLE , 0 , 0 , 0 , 2 , 2 , dimensions , NO_LOGVALDIMS , (
-NULL ) , ( NULL ) , 0 , 50 , 0.001 , 1 ) ; if ( rtDW . ml3whhvhfc .
+NULL ) , ( NULL ) , 0 , 5 , 2.0E-5 , 1 ) ; if ( rtDW . ml3whhvhfc .
 LoggedData == ( NULL ) ) return ; } { int_T dimensions [ 2 ] = { 2 , 1 } ;
 rtDW . gdtp522pfd . LoggedData = rt_CreateLogVar ( ssGetRTWLogInfo ( rtS ) ,
 ssGetTStart ( rtS ) , ssGetTFinal ( rtS ) , 0.0 , ( & ssGetErrorStatus ( rtS
 ) ) , "pos1" , SS_DOUBLE , 0 , 0 , 0 , 2 , 2 , dimensions , NO_LOGVALDIMS , (
-NULL ) , ( NULL ) , 0 , 50 , 0.001 , 1 ) ; if ( rtDW . gdtp522pfd .
+NULL ) , ( NULL ) , 0 , 5 , 2.0E-5 , 1 ) ; if ( rtDW . gdtp522pfd .
 LoggedData == ( NULL ) ) return ; } { int_T dimensions [ 2 ] = { 2 , 1 } ;
 rtDW . afkq2ccnyz . LoggedData = rt_CreateLogVar ( ssGetRTWLogInfo ( rtS ) ,
 ssGetTStart ( rtS ) , ssGetTFinal ( rtS ) , 0.0 , ( & ssGetErrorStatus ( rtS
 ) ) , "pos_supercell_1" , SS_DOUBLE , 0 , 0 , 0 , 2 , 2 , dimensions ,
-NO_LOGVALDIMS , ( NULL ) , ( NULL ) , 0 , 50 , 0.001 , 1 ) ; if ( rtDW .
+NO_LOGVALDIMS , ( NULL ) , ( NULL ) , 0 , 5 , 2.0E-5 , 1 ) ; if ( rtDW .
 afkq2ccnyz . LoggedData == ( NULL ) ) return ; } rtDW . ahvyf2z4j5 [ 0 ] =
 rtP . DataStoreMemory_InitialValue [ 0 ] ; rtDW . ahvyf2z4j5 [ 1 ] = rtP .
 DataStoreMemory_InitialValue [ 1 ] ; MdlInitialize ( ) ; } void MdlOutputs (
@@ -269,11 +269,11 @@ rtS , 0 ) ; ssSetNumU ( rtS , 0 ) ; ssSetDirectFeedThrough ( rtS , 0 ) ;
 ssSetNumSampleTimes ( rtS , 2 ) ; ssSetNumBlocks ( rtS , 90 ) ;
 ssSetNumBlockIO ( rtS , 18 ) ; ssSetNumBlockParams ( rtS , 3205 ) ; } void
 MdlInitializeSampleTimes ( void ) { ssSetSampleTime ( rtS , 0 , 0.0 ) ;
-ssSetSampleTime ( rtS , 1 , 0.001 ) ; ssSetOffsetTime ( rtS , 0 , 1.0 ) ;
+ssSetSampleTime ( rtS , 1 , 2.0E-5 ) ; ssSetOffsetTime ( rtS , 0 , 1.0 ) ;
 ssSetOffsetTime ( rtS , 1 , 0.0 ) ; } void raccel_set_checksum ( ) {
-ssSetChecksumVal ( rtS , 0 , 4043941710U ) ; ssSetChecksumVal ( rtS , 1 ,
-3992423482U ) ; ssSetChecksumVal ( rtS , 2 , 1901846723U ) ; ssSetChecksumVal
-( rtS , 3 , 2406263254U ) ; }
+ssSetChecksumVal ( rtS , 0 , 1797516055U ) ; ssSetChecksumVal ( rtS , 1 ,
+1455765115U ) ; ssSetChecksumVal ( rtS , 2 , 654015503U ) ; ssSetChecksumVal
+( rtS , 3 , 3858682458U ) ; }
 #if defined(_MSC_VER)
 #pragma optimize( "", off )
 #endif
@@ -309,8 +309,8 @@ sl_pigle_main_current_InitializeDataMapInfo ( ) ;
 ssSetIsRapidAcceleratorActive ( rtS , true ) ; ssSetRootSS ( rtS , rtS ) ;
 ssSetVersion ( rtS , SIMSTRUCT_VERSION_LEVEL2 ) ; ssSetModelName ( rtS ,
 "sl_pigle_main_current" ) ; ssSetPath ( rtS , "sl_pigle_main_current" ) ;
-ssSetTStart ( rtS , 0.0 ) ; ssSetTFinal ( rtS , 62.75 ) ; { static RTWLogInfo
-rt_DataLoggingInfo ; rt_DataLoggingInfo . loggingInterval = NULL ;
+ssSetTStart ( rtS , 0.0 ) ; ssSetTFinal ( rtS , 26.2143 ) ; { static
+RTWLogInfo rt_DataLoggingInfo ; rt_DataLoggingInfo . loggingInterval = NULL ;
 ssSetRTWLogInfo ( rtS , & rt_DataLoggingInfo ) ; } { { static int_T
 rt_LoggedStateWidths [ ] = { 1 , 1 , 1 , 1 } ; static int_T
 rt_LoggedStateNumDimensions [ ] = { 1 , 1 , 1 , 1 } ; static int_T
@@ -354,9 +354,9 @@ ssGetRTWLogInfo ( rtS ) , 0 ) ; rtliSetLogDecimation ( ssGetRTWLogInfo ( rtS
 ) , 1 ) ; rtliSetLogY ( ssGetRTWLogInfo ( rtS ) , "" ) ;
 rtliSetLogYSignalInfo ( ssGetRTWLogInfo ( rtS ) , ( NULL ) ) ;
 rtliSetLogYSignalPtrs ( ssGetRTWLogInfo ( rtS ) , ( NULL ) ) ; } { static
-ssSolverInfo slvrInfo ; ssSetStepSize ( rtS , 0.001 ) ; ssSetMinStepSize (
+ssSolverInfo slvrInfo ; ssSetStepSize ( rtS , 2.0E-5 ) ; ssSetMinStepSize (
 rtS , 0.0 ) ; ssSetMaxNumMinSteps ( rtS , - 1 ) ; ssSetMinStepViolatedError (
-rtS , 0 ) ; ssSetMaxStepSize ( rtS , 0.001 ) ; ssSetSolverMaxOrder ( rtS , -
+rtS , 0 ) ; ssSetMaxStepSize ( rtS , 2.0E-5 ) ; ssSetSolverMaxOrder ( rtS , -
 1 ) ; ssSetSolverRefineFactor ( rtS , 1 ) ; ssSetOutputTimes ( rtS , ( NULL )
 ) ; ssSetNumOutputTimes ( rtS , 0 ) ; ssSetOutputTimesOnly ( rtS , 0 ) ;
 ssSetOutputTimesIndex ( rtS , 0 ) ; ssSetZCCacheNeedsReset ( rtS , 0 ) ;
@@ -373,8 +373,8 @@ ssSetModelLogDataIfInInterval ( rtS , rt_UpdateTXXFYLogVars ) ;
 ssSetModelUpdate ( rtS , MdlUpdate ) ; ssSetTNextTid ( rtS , INT_MIN ) ;
 ssSetTNext ( rtS , rtMinusInf ) ; ssSetSolverNeedsReset ( rtS ) ;
 ssSetNumNonsampledZCs ( rtS , 0 ) ; } ssSetChecksumVal ( rtS , 0 ,
-4043941710U ) ; ssSetChecksumVal ( rtS , 1 , 3992423482U ) ; ssSetChecksumVal
-( rtS , 2 , 1901846723U ) ; ssSetChecksumVal ( rtS , 3 , 2406263254U ) ; {
+1797516055U ) ; ssSetChecksumVal ( rtS , 1 , 1455765115U ) ; ssSetChecksumVal
+( rtS , 2 , 654015503U ) ; ssSetChecksumVal ( rtS , 3 , 3858682458U ) ; {
 static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE ; static
 RTWExtModeInfo rt_ExtModeInfo ; static const sysRanDType * systemRan [ 2 ] ;
 gblRTWExtModeInfo = & rt_ExtModeInfo ; ssSetRTWExtModeInfo ( rtS , &
