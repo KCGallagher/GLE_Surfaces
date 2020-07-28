@@ -7,11 +7,15 @@
 %save('tau_time_base', 'time_base')
 
 load('tau_time_base', 'time_base')
-load('tau3', 'fulldata_tau3', 'max_tau3');
+%load('tau3', 'fulldata_tau3', 'max_tau3');
 %load('tau30', 'fulldata_tau30', 'max_tau30');
 load('tau1', 'fulldata_tau1', 'max_tau1');
 load('tau0', 'fulldata_tau0', 'max_tau0');
-%load('tau300', 'fulldata_tau300', 'max_tau300');
+load('tau1_p', 'fulldata_tau1_p', 'max_tau1_p');
+load('tau0_p', 'fulldata_tau0_p', 'max_tau0_p');
+load('tau1_sp', 'fulldata_tau1_sp', 'max_tau1_sp');
+load('tau0_sp', 'fulldata_tau0_sp', 'max_tau0_sp');
+
 
 % dK = [0 0.05 0.1 0.15 0.2:0.1:1 1.2:0.2:5];
 %Delta_k = dK(10); %same index as was used to obtain data CHANGE AS REQ
@@ -39,28 +43,33 @@ X=(Boltzmann*T/(mass_list*eta^2))*(eta/wD-1+eta*time_base+(exp(-wD*time_base/2)/
 exponent=-Delta_k^2*X;
 isf_GLE=exp(exponent);
 
-%%NoPot SOLUTION COMPARISON for google chat
+set(gca,'FontSize',14) %use for subplots in latex report
+%%NoPot SOLUTION COMPARISON 
 if true
-    figure; semilogx(time_base, isf_LE)
+    figure; semilogx(time_base, isf_LE, 'k--')
     hold on
-    semilogx(time_base, isf_lowtime, 'k--')
-    %semilogx(time_base',fulldata_tau0);
-    semilogx(params.t_isf',real(isf_inc_CoM(:,:,1)))
+    semilogx(time_base',fulldata_tau0);
+    semilogx(time_base',fulldata_tau0_p);
+    semilogx(time_base',fulldata_tau0_sp);
     hold off
-    legend('Exact LE', 'Low time LE', 'Simulation')
-    xlabel('t / ps'); ylabel('Normalised ISF'); title('Analytic Solution Comparison')
-    %xlim([0.003 0.5])
+    set(gca,'FontSize',14) %use for subplots in latex report
+    legend('Analytic Solution', 'No Potential', 'Cu (111) Potential', 'Magnified Potential')
+    xlabel('t / ps'); ylabel('Normalised ISF'); %title('Analytic Solution Comparison')
+    xlim([0.05 4])
 end
 
-%%NoPot GLE SOLUTION COMPARISON for google chat
-if false
-    figure; plot(time_base, isf_GLE, 'k--')
+%%Pot SOLUTION COMPARISON 
+if true
+    figure; semilogx(time_base, isf_GLE, 'k--')
     hold on
-    plot(time_base,real(isf_inc_CoM(:,:,1)))
+    semilogx(time_base',fulldata_tau1);
+    semilogx(time_base',fulldata_tau1_p);
+    semilogx(time_base',fulldata_tau1_sp);
     hold off
-    legend('Exact GLE', 'Simulation')
-    xlabel('t / ps'); ylabel('Normalised ISF'); title('Analytic Solution Comparison')
-    %xlim([1 15])
+    set(gca,'FontSize',14) %use for subplots in latex report
+    legend('Analytic Solution', 'No Potential', 'Cu (111) Potential', 'Magnified Potential')
+    xlabel('t / ps'); ylabel('Normalised ISF'); %title('Analytic Solution Comparison')
+    xlim([0.05 4])
 end
 
 %%EXACT SOLUTION COMPARISON

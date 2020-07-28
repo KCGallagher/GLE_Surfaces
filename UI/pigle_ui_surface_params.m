@@ -1,7 +1,7 @@
 
 %% params for surface_params.m
 T=140;
-Nprtcl_total = 10;
+Nprtcl_total = 25;
 mass_list = [7]; 
 radius = [0.2]; 
 number_density = [0.1];

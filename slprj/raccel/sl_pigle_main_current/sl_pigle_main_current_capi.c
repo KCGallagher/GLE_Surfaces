@@ -41,9 +41,9 @@ TARGET_STRING ( "" ) , 0 , 2 , 1 , 0 , 0 } , { 9 , 0 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/Divide" ) , TARGET_STRING (
 "velocity" ) , 0 , 0 , 1 , 0 , 1 } , { 10 , 0 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/Product1" ) , TARGET_STRING (
-"" ) , 0 , 0 , 1 , 0 , 0 } , { 11 , 0 , TARGET_STRING (
+"" ) , 0 , 0 , 0 , 0 , 0 } , { 11 , 0 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/Add" ) , TARGET_STRING (
-"Forces" ) , 0 , 0 , 1 , 0 , 1 } , { 12 , 0 , TARGET_STRING (
+"Forces" ) , 0 , 0 , 0 , 0 , 1 } , { 12 , 0 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/Unary Minus" ) , TARGET_STRING
 ( "" ) , 0 , 0 , 2 , 0 , 0 } , { 13 , 0 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/Discrete-Time Integrator1" ) ,
@@ -53,9 +53,9 @@ TARGET_STRING ( "" ) , 0 , 2 , 1 , 0 , 0 } , { 15 , 0 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/Divide" ) , TARGET_STRING (
 "velocity" ) , 0 , 0 , 1 , 0 , 1 } , { 16 , 0 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/Product1" ) , TARGET_STRING (
-"" ) , 0 , 0 , 1 , 0 , 0 } , { 17 , 0 , TARGET_STRING (
+"" ) , 0 , 0 , 0 , 0 , 0 } , { 17 , 0 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/Add" ) , TARGET_STRING (
-"Forces" ) , 0 , 0 , 1 , 0 , 1 } , { 18 , 0 , TARGET_STRING (
+"Forces" ) , 0 , 0 , 0 , 0 , 1 } , { 18 , 0 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/Unary Minus" ) , TARGET_STRING
 ( "" ) , 0 , 0 , 2 , 0 , 0 } , { 0 , 0 , ( NULL ) , ( NULL ) , 0 , 0 , 0 , 0
 , 0 } } ; static const rtwCAPI_BlockParameters rtBlockParameters [ ] = { { 19
@@ -97,65 +97,65 @@ TARGET_STRING ( "Value" ) , 0 , 3 , 0 } , { 26 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/r_init/celldim y" ) , TARGET_STRING (
 "Value" ) , 0 , 4 , 0 } , { 38 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/r_init/Uniform Random Number x" ) ,
-TARGET_STRING ( "Minimum" ) , 0 , 2 , 0 } , { 39 , TARGET_STRING (
+TARGET_STRING ( "Minimum" ) , 0 , 9 , 0 } , { 39 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/r_init/Uniform Random Number x" ) ,
-TARGET_STRING ( "Maximum" ) , 0 , 2 , 0 } , { 40 , TARGET_STRING (
+TARGET_STRING ( "Maximum" ) , 0 , 9 , 0 } , { 40 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/r_init/Uniform Random Number x" ) ,
 TARGET_STRING ( "Seed" ) , 0 , 4 , 0 } , { 41 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/r_init/Uniform Random Number y" ) ,
-TARGET_STRING ( "Minimum" ) , 0 , 2 , 0 } , { 42 , TARGET_STRING (
+TARGET_STRING ( "Minimum" ) , 0 , 9 , 0 } , { 42 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/r_init/Uniform Random Number y" ) ,
-TARGET_STRING ( "Maximum" ) , 0 , 2 , 0 } , { 43 , TARGET_STRING (
+TARGET_STRING ( "Maximum" ) , 0 , 9 , 0 } , { 43 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/r_init/Uniform Random Number y" ) ,
 TARGET_STRING ( "Seed" ) , 0 , 4 , 0 } , { 44 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/Band-Limited White Noise/Output"
-) , TARGET_STRING ( "Gain" ) , 0 , 2 , 0 } , { 45 , TARGET_STRING (
+) , TARGET_STRING ( "Gain" ) , 0 , 9 , 0 } , { 45 , TARGET_STRING (
  "sl_pigle_main_current/Population 1/Delta R/Band-Limited White Noise/White Noise"
-) , TARGET_STRING ( "Mean" ) , 0 , 2 , 0 } , { 46 , TARGET_STRING (
+) , TARGET_STRING ( "Mean" ) , 0 , 9 , 0 } , { 46 , TARGET_STRING (
  "sl_pigle_main_current/Population 1/Delta R/Band-Limited White Noise/White Noise"
-) , TARGET_STRING ( "StdDev" ) , 0 , 2 , 0 } , { 47 , TARGET_STRING (
+) , TARGET_STRING ( "StdDev" ) , 0 , 9 , 0 } , { 47 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/mass" ) , TARGET_STRING (
-"Value" ) , 0 , 2 , 0 } , { 48 , TARGET_STRING (
+"Value" ) , 0 , 9 , 0 } , { 48 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/ones" ) , TARGET_STRING (
-"Value" ) , 0 , 2 , 0 } , { 49 , TARGET_STRING (
+"Value" ) , 0 , 8 , 0 } , { 49 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/zeros" ) , TARGET_STRING (
-"Value" ) , 0 , 4 , 0 } , { 50 , TARGET_STRING (
+"Value" ) , 0 , 0 , 0 } , { 50 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/Discrete-Time Integrator1" ) ,
-TARGET_STRING ( "gainval" ) , 0 , 2 , 0 } , { 51 , TARGET_STRING (
+TARGET_STRING ( "gainval" ) , 0 , 9 , 0 } , { 51 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/Discrete-Time Integrator1" ) ,
-TARGET_STRING ( "InitialCondition" ) , 0 , 2 , 0 } , { 52 , TARGET_STRING (
+TARGET_STRING ( "InitialCondition" ) , 0 , 9 , 0 } , { 52 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/Discrete-Time Integrator2" ) ,
-TARGET_STRING ( "gainval" ) , 0 , 2 , 0 } , { 53 , TARGET_STRING (
+TARGET_STRING ( "gainval" ) , 0 , 9 , 0 } , { 53 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dx/Discrete-Time Integrator2" ) ,
-TARGET_STRING ( "InitialCondition" ) , 0 , 2 , 0 } , { 54 , TARGET_STRING (
+TARGET_STRING ( "InitialCondition" ) , 0 , 9 , 0 } , { 54 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/mass" ) , TARGET_STRING (
-"Value" ) , 0 , 2 , 0 } , { 55 , TARGET_STRING (
+"Value" ) , 0 , 9 , 0 } , { 55 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/ones" ) , TARGET_STRING (
-"Value" ) , 0 , 2 , 0 } , { 56 , TARGET_STRING (
+"Value" ) , 0 , 8 , 0 } , { 56 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/zeros" ) , TARGET_STRING (
-"Value" ) , 0 , 4 , 0 } , { 57 , TARGET_STRING (
+"Value" ) , 0 , 0 , 0 } , { 57 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/Discrete-Time Integrator1" ) ,
-TARGET_STRING ( "gainval" ) , 0 , 2 , 0 } , { 58 , TARGET_STRING (
+TARGET_STRING ( "gainval" ) , 0 , 9 , 0 } , { 58 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/Discrete-Time Integrator1" ) ,
-TARGET_STRING ( "InitialCondition" ) , 0 , 2 , 0 } , { 59 , TARGET_STRING (
+TARGET_STRING ( "InitialCondition" ) , 0 , 9 , 0 } , { 59 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/Discrete-Time Integrator2" ) ,
-TARGET_STRING ( "gainval" ) , 0 , 2 , 0 } , { 60 , TARGET_STRING (
+TARGET_STRING ( "gainval" ) , 0 , 9 , 0 } , { 60 , TARGET_STRING (
 "sl_pigle_main_current/Population 1/Delta R/dy/Discrete-Time Integrator2" ) ,
-TARGET_STRING ( "InitialCondition" ) , 0 , 2 , 0 } , { 0 , ( NULL ) , ( NULL
+TARGET_STRING ( "InitialCondition" ) , 0 , 9 , 0 } , { 0 , ( NULL ) , ( NULL
 ) , 0 , 0 , 0 } } ; static const rtwCAPI_ModelParameters rtModelParameters [
-] = { { 61 , TARGET_STRING ( "seed_values_1" ) , 0 , 9 , 0 } , { 0 , ( NULL )
-, 0 , 0 , 0 } } ;
+] = { { 61 , TARGET_STRING ( "seed_values_1" ) , 0 , 10 , 0 } , { 0 , ( NULL
+) , 0 , 0 , 0 } } ;
 #ifndef HOST_CAPI_BUILD
 static void * rtDataAddrMap [ ] = { & rtB . czszrqhgbn [ 0 ] , & rtB .
 a01jyq3kex [ 0 ] , & rtB . bkxfqi0pxq [ 0 ] , & rtB . akgj1ibwf3 [ 0 ] , &
 rtB . bhc54zc0ex [ 0 ] , & rtB . awprf41k1q [ 0 ] , & rtB . ea2wltz1rm [ 0 ]
 , & rtB . fklh3xatdn [ 0 ] , & rtB . lg50ovp1y5 [ 0 ] , & rtB . aozy4iaksv [
 0 ] , & rtB . auxnwxtfvo [ 0 ] , & rtB . h0heujskh3 [ 0 ] , & rtB .
-jruwlwzzf4 , & rtB . ogu0vtimd4 [ 0 ] , & rtB . iver2udidl [ 0 ] , & rtB .
-apwemeo1pz [ 0 ] , & rtB . eprwmaok5p [ 0 ] , & rtB . ldr2mikqjb [ 0 ] , &
-rtB . er40lujdmg , & rtP . Interactions_Value [ 0 ] , & rtP .
-DataStoreMemory_InitialValue [ 0 ] , & rtP . A_Value , & rtP . B_Value , &
-rtP . celldim_Value [ 0 ] , & rtP . celldim1_Value [ 0 ] , & rtP .
+jruwlwzzf4 [ 0 ] , & rtB . ogu0vtimd4 [ 0 ] , & rtB . iver2udidl [ 0 ] , &
+rtB . apwemeo1pz [ 0 ] , & rtB . eprwmaok5p [ 0 ] , & rtB . ldr2mikqjb [ 0 ]
+, & rtB . er40lujdmg [ 0 ] , & rtP . Interactions_Value [ 0 ] , & rtP .
+DataStoreMemory_InitialValue [ 0 ] , & rtP . A_Value [ 0 ] , & rtP . B_Value
+[ 0 ] , & rtP . celldim_Value [ 0 ] , & rtP . celldim1_Value [ 0 ] , & rtP .
 permvec_Value [ 0 ] , & rtP . freeze_signal_Value [ 0 ] , & rtP .
 reset_signal_Value [ 0 ] , & rtP . forceX_tableData [ 0 ] , & rtP .
 forceX_bp01Data [ 0 ] , & rtP . forceX_bp02Data [ 0 ] , & rtP .
@@ -167,10 +167,10 @@ UniformRandomNumberx_Maximum , & rtP . UniformRandomNumberx_Seed [ 0 ] , &
 rtP . UniformRandomNumbery_Minimum , & rtP . UniformRandomNumbery_Maximum , &
 rtP . UniformRandomNumbery_Seed [ 0 ] , & rtP . Output_Gain , & rtP .
 WhiteNoise_Mean , & rtP . WhiteNoise_StdDev , & rtP . mass_Value , & rtP .
-ones_Value , & rtP . zeros_Value [ 0 ] , & rtP .
+ones_Value [ 0 ] , & rtP . zeros_Value [ 0 ] , & rtP .
 DiscreteTimeIntegrator1_gainval , & rtP . DiscreteTimeIntegrator1_IC , & rtP
 . DiscreteTimeIntegrator2_gainval , & rtP . DiscreteTimeIntegrator2_IC , &
-rtP . mass_Value_ay4mlzeqvo , & rtP . ones_Value_a523d0oiup , & rtP .
+rtP . mass_Value_ay4mlzeqvo , & rtP . ones_Value_a523d0oiup [ 0 ] , & rtP .
 zeros_Value_ljr13py54z [ 0 ] , & rtP .
 DiscreteTimeIntegrator1_gainval_mmm5abugrv , & rtP .
 DiscreteTimeIntegrator1_IC_fwd0synzow , & rtP .
@@ -190,12 +190,13 @@ SS_UINT32 , 0 , 0 , 0 } } ;
 static TARGET_CONST rtwCAPI_ElementMap rtElementMap [ ] = { { ( NULL ) , 0 ,
 0 , 0 , 0 } , } ; static const rtwCAPI_DimensionMap rtDimensionMap [ ] = { {
 rtwCAPI_MATRIX_COL_MAJOR , 0 , 2 , 0 } , { rtwCAPI_MATRIX_COL_MAJOR , 2 , 2 ,
-0 } , { rtwCAPI_SCALAR , 4 , 2 , 0 } , { rtwCAPI_VECTOR , 6 , 2 , 0 } , {
-rtwCAPI_VECTOR , 2 , 2 , 0 } , { rtwCAPI_MATRIX_COL_MAJOR , 8 , 2 , 0 } , {
-rtwCAPI_VECTOR , 10 , 2 , 0 } , { rtwCAPI_VECTOR , 12 , 2 , 0 } , {
-rtwCAPI_VECTOR , 14 , 2 , 0 } , { rtwCAPI_MATRIX_COL_MAJOR_ND , 16 , 3 , 0 }
-} ; static const uint_T rtDimensionArray [ ] = { 2 , 10 , 1 , 10 , 1 , 1 , 1
-, 2 , 50 , 30 , 1 , 50 , 1 , 30 , 2 , 1 , 1 , 10 , 2 } ; static const real_T
+0 } , { rtwCAPI_MATRIX_COL_MAJOR , 4 , 2 , 0 } , { rtwCAPI_VECTOR , 6 , 2 , 0
+} , { rtwCAPI_VECTOR , 2 , 2 , 0 } , { rtwCAPI_MATRIX_COL_MAJOR , 8 , 2 , 0 }
+, { rtwCAPI_VECTOR , 10 , 2 , 0 } , { rtwCAPI_VECTOR , 12 , 2 , 0 } , {
+rtwCAPI_VECTOR , 14 , 2 , 0 } , { rtwCAPI_SCALAR , 16 , 2 , 0 } , {
+rtwCAPI_MATRIX_COL_MAJOR_ND , 18 , 3 , 0 } } ; static const uint_T
+rtDimensionArray [ ] = { 2 , 25 , 1 , 25 , 2 , 2 , 1 , 2 , 50 , 30 , 1 , 50 ,
+1 , 30 , 2 , 1 , 1 , 1 , 2 , 25 , 2 } ; static const real_T
 rtcapiStoredFloats [ ] = { 0.0002 , 0.0 } ; static const rtwCAPI_FixPtMap
 rtFixPtMap [ ] = { { ( NULL ) , ( NULL ) , rtwCAPI_FIX_RESERVED , 0 , 0 , 0 }
 , } ; static const rtwCAPI_SampleTimeMap rtSampleTimeMap [ ] = { { ( NULL ) ,
@@ -204,8 +205,8 @@ void * ) & rtcapiStoredFloats [ 1 ] , 1 , 0 } } ; static
 rtwCAPI_ModelMappingStaticInfo mmiStatic = { { rtBlockSignals , 19 , ( NULL )
 , 0 , ( NULL ) , 0 } , { rtBlockParameters , 42 , rtModelParameters , 1 } , {
 ( NULL ) , 0 } , { rtDataTypeMap , rtDimensionMap , rtFixPtMap , rtElementMap
-, rtSampleTimeMap , rtDimensionArray } , "float" , { 389594904U , 911554340U
-, 2026226166U , 757422983U } , ( NULL ) , 0 , 0 } ; const
+, rtSampleTimeMap , rtDimensionArray } , "float" , { 2553842150U ,
+2116634661U , 3166579562U , 47765863U } , ( NULL ) , 0 , 0 } ; const
 rtwCAPI_ModelMappingStaticInfo * sl_pigle_main_current_GetCAPIStaticMap (
 void ) { return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD
