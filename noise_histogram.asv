@@ -1,0 +1,6 @@
+load('test_noise', 'ans')
+noise_data= ans.Data;
+figure; histogram(abs(noise_data))
+Ang = char(197); xlabel(['Impulse (amu ' Ang '/ ps^2)']); ylabel('Frequency')
+%set(gca,'YScale','log')
+

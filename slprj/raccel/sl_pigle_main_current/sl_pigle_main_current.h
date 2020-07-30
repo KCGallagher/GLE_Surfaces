@@ -7,6 +7,8 @@
 #define sl_pigle_main_current_COMMON_INCLUDES_
 #include <stdlib.h>
 #include "rtwtypes.h"
+#include "sl_fileio_rtw.h"
+#include "simtarget/slSimTgtSlFileioRTW.h"
 #include "simtarget/slSimTgtSigstreamRTW.h"
 #include "simtarget/slSimTgtSlioCoreRTW.h"
 #include "simtarget/slSimTgtSlioClientsRTW.h"
@@ -30,7 +32,7 @@
 #define NSAMPLE_TIMES (3) 
 #define NINPUTS (0)       
 #define NOUTPUTS (0)     
-#define NBLOCKIO (19) 
+#define NBLOCKIO (18) 
 #define NUM_ZC_EVENTS (0) 
 #ifndef NCSTATES
 #define NCSTATES (0)   
@@ -45,42 +47,39 @@
 #endif
 #ifndef IN_RACCEL_MAIN
 #endif
-typedef struct { real_T aozy4iaksv [ 25 ] ; real_T fklh3xatdn [ 25 ] ; real_T
-apwemeo1pz [ 25 ] ; real_T ogu0vtimd4 [ 25 ] ; real_T bkxfqi0pxq [ 50 ] ;
-real_T a01jyq3kex [ 50 ] ; real_T akgj1ibwf3 [ 50 ] ; real_T h0heujskh3 [ 50
-] ; real_T ldr2mikqjb [ 50 ] ; real_T bhc54zc0ex [ 25 ] ; real_T auxnwxtfvo [
-50 ] ; real_T jruwlwzzf4 [ 4 ] ; real_T eprwmaok5p [ 50 ] ; real_T er40lujdmg
-[ 4 ] ; real_T czszrqhgbn [ 50 ] ; real_T awprf41k1q [ 50 ] ; int16_T
-lg50ovp1y5 [ 25 ] ; int16_T iver2udidl [ 25 ] ; boolean_T ea2wltz1rm [ 50 ] ;
-} B ; typedef struct { real_T kash4ux1pw [ 50 ] ; real_T cfhfmokiqc [ 25 ] ;
-real_T kwcy3yjcpg [ 50 ] ; real_T lblnmgrqpb [ 25 ] ; real_T kyo5azbgia [ 100
-] ; real_T ahvyf2z4j5 [ 50 ] ; real_T g1dnqdyxsu [ 25 ] ; real_T df1mxqbe3i [
-25 ] ; struct { void * LoggedData ; } ml3whhvhfc ; struct { void * LoggedData
-; } gdtp522pfd ; struct { void * LoggedData ; } afkq2ccnyz ; struct { void *
-LoggedData ; } c43cp3qtjl ; uint32_T nkihzgokkq [ 100 ] ; uint32_T aordumbgtk
-[ 25 ] ; uint32_T iusooyak1q [ 25 ] ; } DW ; typedef struct {
-rtwCAPI_ModelMappingInfo mmi ; } DataMapInfo ; struct P_ { real_T
-seed_values_1 [ 100 ] ; real_T UniformRandomNumberx_Minimum ; real_T
-UniformRandomNumberx_Maximum ; real_T UniformRandomNumberx_Seed [ 25 ] ;
-real_T UniformRandomNumbery_Minimum ; real_T UniformRandomNumbery_Maximum ;
-real_T UniformRandomNumbery_Seed [ 25 ] ; real_T celldimx_Value [ 25 ] ;
-real_T celldimy_Value [ 25 ] ; real_T DiscreteTimeIntegrator2_gainval ;
-real_T DiscreteTimeIntegrator2_IC ; real_T DiscreteTimeIntegrator1_gainval ;
-real_T DiscreteTimeIntegrator1_IC ; real_T
-DiscreteTimeIntegrator2_gainval_pfp1n5ezxj ; real_T
-DiscreteTimeIntegrator2_IC_a5b0eygpkp ; real_T
-DiscreteTimeIntegrator1_gainval_mmm5abugrv ; real_T
-DiscreteTimeIntegrator1_IC_fwd0synzow ; real_T forceX_tableData [ 1500 ] ;
+typedef struct { real_T aozy4iaksv ; real_T aotw3wpo3l ; real_T k0aotrxxhp [
+2 ] ; real_T bkxfqi0pxq [ 2 ] ; real_T a01jyq3kex [ 2 ] ; real_T akgj1ibwf3 [
+2 ] ; real_T h0heujskh3 ; real_T lt5f3vyelk ; real_T mpzbg1vxpi ; real_T
+auxnwxtfvo ; real_T jxzc3j42ep ; real_T ij0loghtpc ; real_T gbmhcujwra ;
+real_T frvc2bkvjj [ 2 ] ; real_T nsavv5fsqn [ 2 ] ; int16_T lg50ovp1y5 ;
+int16_T pbvpreud5h ; boolean_T n4k0cgs1v1 [ 2 ] ; } B ; typedef struct {
+real_T kash4ux1pw ; real_T cfhfmokiqc ; real_T eqpbnjp2zk ; real_T bvnexknatn
+; real_T kyo5azbgia [ 2 ] ; real_T ahvyf2z4j5 [ 2 ] ; real_T bpxfzv3f1z ;
+real_T giykdxuf5q ; struct { void * FilePtr ; } f1220nrwpg ; struct { void *
+LoggedData ; } ok2fmkcwlb ; struct { void * LoggedData ; } ddeykzwnjp ;
+struct { void * LoggedData ; } ajbnqjlsvu ; struct { void * LoggedData ; }
+hh0sq0h23x ; uint32_T nkihzgokkq [ 2 ] ; uint32_T iusooyak1q ; uint32_T
+izdh4v4o0y ; struct { int_T Count ; int_T Decimation ; } dvrde3mhkz ; } DW ;
+typedef struct { rtwCAPI_ModelMappingInfo mmi ; } DataMapInfo ; struct P_ {
+real_T seed_values_1 [ 2 ] ; real_T UniformRandomNumberx_Minimum ; real_T
+UniformRandomNumberx_Maximum ; real_T UniformRandomNumberx_Seed ; real_T
+UniformRandomNumbery_Minimum ; real_T UniformRandomNumbery_Maximum ; real_T
+UniformRandomNumbery_Seed ; real_T celldimx_Value ; real_T celldimy_Value ;
+real_T DiscreteTimeIntegrator2_gainval ; real_T DiscreteTimeIntegrator2_IC ;
+real_T DiscreteTimeIntegrator1_gainval ; real_T DiscreteTimeIntegrator1_IC ;
+real_T DiscreteTimeIntegrator2_gainval_mbxbdqvqmj ; real_T
+DiscreteTimeIntegrator2_IC_hsiqnplk4j ; real_T
+DiscreteTimeIntegrator1_gainval_pfp1n5ezxj ; real_T
+DiscreteTimeIntegrator1_IC_a5b0eygpkp ; real_T forceX_tableData [ 1500 ] ;
 real_T forceX_bp01Data [ 50 ] ; real_T forceX_bp02Data [ 30 ] ; real_T
 forceY_tableData [ 1500 ] ; real_T forceY_bp01Data [ 50 ] ; real_T
 forceY_bp02Data [ 30 ] ; real_T WhiteNoise_Mean ; real_T WhiteNoise_StdDev ;
-real_T Output_Gain ; real_T DataStoreMemory_InitialValue [ 50 ] ; real_T
-A_Value [ 4 ] ; real_T celldim_Value [ 50 ] ; real_T celldim1_Value [ 50 ] ;
-real_T permvec_Value [ 2 ] ; real_T B_Value [ 4 ] ; real_T
-freeze_signal_Value [ 25 ] ; real_T ones_Value [ 2 ] ; real_T
-reset_signal_Value [ 25 ] ; real_T mass_Value ; real_T zeros_Value [ 50 ] ;
-real_T ones_Value_a523d0oiup [ 2 ] ; real_T mass_Value_ay4mlzeqvo ; real_T
-zeros_Value_ljr13py54z [ 50 ] ; real_T Interactions_Value [ 50 ] ; uint32_T
+real_T Output_Gain ; real_T DataStoreMemory_InitialValue [ 2 ] ; real_T
+A_Value ; real_T celldim_Value [ 2 ] ; real_T celldim1_Value [ 2 ] ; real_T
+permvec_Value [ 2 ] ; real_T B_Value ; real_T freeze_signal_Value ; real_T
+ones_Value ; real_T reset_signal_Value ; real_T mass_Value ; real_T
+zeros_Value ; real_T ones_Value_ljr13py54z ; real_T mass_Value_a523d0oiup ;
+real_T zeros_Value_bobjrwbmcw ; real_T Interactions_Value [ 2 ] ; uint32_T
 forceX_maxIndex [ 2 ] ; uint32_T forceY_maxIndex [ 2 ] ; } ; extern const
 char * RT_MEMORY_ALLOCATION_ERROR ; extern B rtB ; extern DW rtDW ; extern P
 rtP ; extern const rtwCAPI_ModelMappingStaticInfo *

@@ -13,13 +13,13 @@ int_T ) , sizeof ( pointer_T ) , sizeof ( action_T ) , 2 * sizeof ( uint32_T
 "int8_T" , "uint8_T" , "int16_T" , "uint16_T" , "int32_T" , "uint32_T" ,
 "boolean_T" , "fcn_call_T" , "int_T" , "pointer_T" , "action_T" ,
 "timer_uint32_pair_T" } ; static DataTypeTransition rtBTransitions [ ] = { {
-( char_T * ) ( & rtB . aozy4iaksv [ 0 ] ) , 0 , 0 , 583 } , { ( char_T * ) (
-& rtB . lg50ovp1y5 [ 0 ] ) , 4 , 0 , 50 } , { ( char_T * ) ( & rtB .
-ea2wltz1rm [ 0 ] ) , 8 , 0 , 50 } , { ( char_T * ) ( & rtDW . kash4ux1pw [ 0
-] ) , 0 , 0 , 350 } , { ( char_T * ) ( & rtDW . ml3whhvhfc . LoggedData ) ,
-11 , 0 , 4 } , { ( char_T * ) ( & rtDW . nkihzgokkq [ 0 ] ) , 7 , 0 , 150 } }
-; static DataTypeTransitionTable rtBTransTable = { 6U , rtBTransitions } ;
-static DataTypeTransition rtPTransitions [ ] = { { ( char_T * ) ( & rtP .
-seed_values_1 [ 0 ] ) , 0 , 0 , 3741 } , { ( char_T * ) ( & rtP .
-forceX_maxIndex [ 0 ] ) , 7 , 0 , 4 } } ; static DataTypeTransitionTable
-rtPTransTable = { 2U , rtPTransitions } ;
+( char_T * ) ( & rtB . aozy4iaksv ) , 0 , 0 , 21 } , { ( char_T * ) ( & rtB .
+lg50ovp1y5 ) , 4 , 0 , 2 } , { ( char_T * ) ( & rtB . n4k0cgs1v1 [ 0 ] ) , 8
+, 0 , 2 } , { ( char_T * ) ( & rtDW . kash4ux1pw ) , 0 , 0 , 10 } , { (
+char_T * ) ( & rtDW . f1220nrwpg . FilePtr ) , 11 , 0 , 5 } , { ( char_T * )
+( & rtDW . nkihzgokkq [ 0 ] ) , 7 , 0 , 4 } , { ( char_T * ) ( & rtDW .
+dvrde3mhkz . Count ) , 10 , 0 , 1 } } ; static DataTypeTransitionTable
+rtBTransTable = { 7U , rtBTransitions } ; static DataTypeTransition
+rtPTransitions [ ] = { { ( char_T * ) ( & rtP . seed_values_1 [ 0 ] ) , 0 , 0
+, 3201 } , { ( char_T * ) ( & rtP . forceX_maxIndex [ 0 ] ) , 7 , 0 , 4 } } ;
+static DataTypeTransitionTable rtPTransTable = { 2U , rtPTransitions } ;

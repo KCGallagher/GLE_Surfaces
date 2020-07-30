@@ -21,7 +21,8 @@
   }
 #endif
 #endif
-extern real_T rt_urand_Upu32_Yd_f_pw_snf ( uint32_T * u ) ; extern real_T
+extern uint8_T bqhedacqpj [ ] ; extern size_t g33hqiuch0 ; extern real_T
+rt_urand_Upu32_Yd_f_pw_snf ( uint32_T * u ) ; extern real_T
 rt_nrand_Upu32_Yd_f_pw_snf ( uint32_T * u ) ; extern real_T look2_binlxpw (
 real_T u0 , real_T u1 , const real_T bp0 [ ] , const real_T bp1 [ ] , const
 real_T table [ ] , const uint32_T maxIndex [ ] , uint32_T stride ) ;
