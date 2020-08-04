@@ -29,7 +29,7 @@ sample_time = 2e-4;
 sample_time_clist = 2e-3;
 isf_sample_time = 1e-2;
 thermalizing_time = 0;
-stop_time = 2048*0.02;
+stop_time = 2048*0.2;
 
 % N_steps and N_ISF_steps are calculated after PIGLE adjusts the requested time parameters
 max_N_steps = 1e9;

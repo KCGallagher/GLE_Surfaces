@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'sl_pigle_main_current'. 
 ## 
 ## Makefile     : sl_pigle_main_current.mk
-## Generated on : Fri Jul 31 15:45:30 2020
+## Generated on : Mon Aug 03 17:08:50 2020
 ##  version:  
 ## 
 ## Build Info:
@@ -211,7 +211,7 @@ PREBUILT_OBJS =
 ## LIBRARIES
 ###########################################################################
 
-LIBS = $(MATLAB_ROOT)/extern/lib/win64/mingw64/libmwblas.lib
+LIBS = 
 
 ###########################################################################
 ## SYSTEM LIBRARIES
@@ -277,7 +277,7 @@ all : build
 build : prebuild $(PRODUCT)
 
 
-buildobj : prebuild $(OBJS) $(PREBUILT_OBJS) $(LIBS)
+buildobj : prebuild $(OBJS) $(PREBUILT_OBJS)
 	@echo "### Successfully generated all binary outputs."
 
 
@@ -301,9 +301,9 @@ execute : download
 # Create a standalone executable            
 #-------------------------------------------
 
-$(PRODUCT) : $(OBJS) $(PREBUILT_OBJS) $(LIBS)
+$(PRODUCT) : $(OBJS) $(PREBUILT_OBJS)
 	@echo "### Creating standalone executable "$(PRODUCT)" ..."
-	$(LD) $(LDFLAGS) -o $(PRODUCT) @$(CMD_FILE) -Wl,--start-group $(LIBS) -Wl,--end-group $(SYSTEM_LIBS) $(TOOLCHAIN_LIBS)
+	$(LD) $(LDFLAGS) -o $(PRODUCT) @$(CMD_FILE) $(SYSTEM_LIBS) $(TOOLCHAIN_LIBS)
 	@echo "### Created: $(PRODUCT)"
 
 

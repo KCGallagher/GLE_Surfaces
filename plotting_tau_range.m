@@ -9,6 +9,7 @@
 load('tau_time_base', 'time_base')
 %load('tau3', 'fulldata_tau3', 'max_tau3');
 %load('tau30', 'fulldata_tau30', 'max_tau30');
+%load('tau10', 'fulldata_tau10', 'max_tau10');
 load('tau1', 'fulldata_tau1', 'max_tau1');
 load('tau0', 'fulldata_tau0', 'max_tau0');
 load('tau1_p', 'fulldata_tau1_p', 'max_tau1_p');
@@ -45,7 +46,7 @@ isf_GLE=exp(exponent);
 
 set(gca,'FontSize',14) %use for subplots in latex report
 %%NoPot SOLUTION COMPARISON 
-if true
+if false
     figure; semilogx(time_base, isf_LE, 'k--')
     hold on
     semilogx(time_base',fulldata_tau0);
@@ -59,7 +60,7 @@ if true
 end
 
 %%Pot SOLUTION COMPARISON 
-if true
+if false
     figure; semilogx(time_base, isf_GLE, 'k--')
     hold on
     semilogx(time_base',fulldata_tau1);
@@ -83,18 +84,19 @@ if false
     xlabel('t / ps'); ylabel('Normalised ISF'); title('Analytic Solution Comparison')
     %xlim([0.003 0.5])
 end
+
 % SIMULATION DATA PLOTTING
-if false
+if true
     figure; semilogx(time_base, isf_LE, '--k')
     hold on
     semilogx(time_base, isf_GLE, '--r')
-    semilogx(time_base',fulldata_tau0);
-    %semilogx(time_base',fulldata_tau1);
-    semilogx(time_base',fulldata_tau3);
+    semilogx(time_base',fulldata_tau0, '-b');
+    semilogx(time_base',fulldata_tau1);
+    %semilogx(time_base',fulldata_tau3);
     hold off
-    xlabel('t / ps'); ylabel('Normalised ISF'); title('Incoherent ISF for Different Noise Filters')
-    legend('Exact LE Solution','Exact GLE Solution','tau = 0','tau = 3')
-    %xlim([0.05 10])
+    xlabel('t / ps'); ylabel('Normalised ISF'); %title('Incoherent ISF for Different Noise Filters')
+    legend('Exact LE Solution','Exact GLE Solution','Simulated \tau = 0','Simulated \tau = 1')
+    %xlim([0.1 3])
 end
 
 %PLOTTING WITH POTENTIAL
