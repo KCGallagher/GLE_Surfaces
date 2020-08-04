@@ -1,11 +1,11 @@
 
 %% params for surface_params.m
 T=140;
-Nprtcl_total = 10;
+Nprtcl_total = 100;
 mass_list = [7]; 
 radius = [0.2]; 
 number_density = [0.1];
-eta =2; % or [5 5]  for case5
+eta =5; % or [5 5]  for case5
 eta_theta = 6;
 tau = [1];
 
