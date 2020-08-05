@@ -13,7 +13,7 @@ run_parallel =0;
 % Specify dK as a 2D vector, 3rd dim is azimuths.
 %dK = 1;
 %dK = [0 0.05 0.1 0.15 0.2:0.1:1 1.2:0.2:5];
-dK = [0 0.05 0.1 0.15 0.2:0.025:1 1.05:0.05:5 5.1:0.1:10]; %for greater sampling
+dK = [0 0.05 0.1 0.15 0.2:0.025:1 1.05:0.05:5 5.1:0.1:30]; %for greater sampling
 
 azim_1 = [0.5 0.866]; %for 112 direction scattering
 %azim_1 = [1 0];
