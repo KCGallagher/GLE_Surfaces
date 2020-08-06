@@ -47,29 +47,29 @@
 #endif
 #ifndef IN_RACCEL_MAIN
 #endif
-typedef struct { real_T gakbmbh2d2 [ 97 ] ; real_T fklh3xatdn [ 97 ] ; real_T
-jkojapvkzw [ 97 ] ; real_T gt11e00gkn [ 97 ] ; real_T bkxfqi0pxq [ 194 ] ;
-real_T a01jyq3kex [ 194 ] ; real_T akgj1ibwf3 [ 194 ] ; real_T mnkabdxejs [
-97 ] ; real_T h0heujskh3 [ 97 ] ; real_T ir0rpxetoe [ 97 ] ; real_T
-f4djn03i2n [ 97 ] ; real_T dv5qanofu3 [ 97 ] ; real_T bvw5c55uf3 ; real_T
-jf2wd03mf3 [ 97 ] ; real_T heb4ixm4x3 ; real_T nwccmbl3cd [ 194 ] ; real_T
-jtfx14x1p1 [ 194 ] ; int16_T ao1gmdn2dp [ 97 ] ; int16_T mdsl05dmxi [ 97 ] ;
-boolean_T d1bg0wxfn3 [ 194 ] ; } B ; typedef struct { real_T kash4ux1pw [ 97
-] ; real_T cfhfmokiqc [ 97 ] ; real_T dx3000kbdr [ 97 ] ; real_T btmvuptxgq [
-97 ] ; real_T bd5ggsd5xp [ 97 ] ; real_T kyo5azbgia [ 194 ] ; real_T
-ahvyf2z4j5 [ 194 ] ; real_T jqip5ulbyv [ 97 ] ; real_T pksdb1tv2w [ 97 ] ;
+typedef struct { real_T gakbmbh2d2 [ 10 ] ; real_T fklh3xatdn [ 10 ] ; real_T
+jkojapvkzw [ 10 ] ; real_T gt11e00gkn [ 10 ] ; real_T bkxfqi0pxq [ 20 ] ;
+real_T a01jyq3kex [ 20 ] ; real_T akgj1ibwf3 [ 20 ] ; real_T mnkabdxejs [ 20
+] ; real_T h0heujskh3 [ 20 ] ; real_T ir0rpxetoe [ 20 ] ; real_T f4djn03i2n [
+10 ] ; real_T dv5qanofu3 [ 20 ] ; real_T bvw5c55uf3 [ 4 ] ; real_T jf2wd03mf3
+[ 20 ] ; real_T heb4ixm4x3 [ 4 ] ; real_T nwccmbl3cd [ 20 ] ; real_T
+jtfx14x1p1 [ 20 ] ; int16_T ao1gmdn2dp [ 10 ] ; int16_T mdsl05dmxi [ 10 ] ;
+boolean_T d1bg0wxfn3 [ 20 ] ; } B ; typedef struct { real_T kash4ux1pw [ 20 ]
+; real_T cfhfmokiqc [ 10 ] ; real_T dx3000kbdr [ 20 ] ; real_T btmvuptxgq [
+10 ] ; real_T bd5ggsd5xp [ 20 ] ; real_T kyo5azbgia [ 40 ] ; real_T
+ahvyf2z4j5 [ 20 ] ; real_T jqip5ulbyv [ 10 ] ; real_T pksdb1tv2w [ 10 ] ;
 struct { void * FilePtr ; } odl14pd3py ; struct { void * FilePtr ; }
 hgizhnb1sw ; struct { void * LoggedData ; } cqmaavz11y ; struct { void *
 LoggedData ; } nxv0llsori ; struct { void * LoggedData ; } bvltoxi0lq ;
-struct { void * LoggedData ; } lw42huz5gz ; uint32_T nkihzgokkq [ 194 ] ;
-uint32_T be0xujqbrq [ 97 ] ; uint32_T dwhnbnorml [ 97 ] ; struct { int_T
+struct { void * LoggedData ; } lw42huz5gz ; uint32_T nkihzgokkq [ 40 ] ;
+uint32_T be0xujqbrq [ 10 ] ; uint32_T dwhnbnorml [ 10 ] ; struct { int_T
 Count ; int_T Decimation ; } foaim50aii ; struct { int_T Count ; int_T
 Decimation ; } dfdzh3eryc ; } DW ; typedef struct { rtwCAPI_ModelMappingInfo
-mmi ; } DataMapInfo ; struct P_ { real_T seed_values_1 [ 194 ] ; real_T
+mmi ; } DataMapInfo ; struct P_ { real_T seed_values_1 [ 40 ] ; real_T
 UniformRandomNumberx_Minimum ; real_T UniformRandomNumberx_Maximum ; real_T
-UniformRandomNumberx_Seed [ 97 ] ; real_T UniformRandomNumbery_Minimum ;
-real_T UniformRandomNumbery_Maximum ; real_T UniformRandomNumbery_Seed [ 97 ]
-; real_T celldimx_Value [ 97 ] ; real_T celldimy_Value [ 97 ] ; real_T
+UniformRandomNumberx_Seed [ 10 ] ; real_T UniformRandomNumbery_Minimum ;
+real_T UniformRandomNumbery_Maximum ; real_T UniformRandomNumbery_Seed [ 10 ]
+; real_T celldimx_Value [ 10 ] ; real_T celldimy_Value [ 10 ] ; real_T
 DiscreteTimeIntegrator2_gainval ; real_T DiscreteTimeIntegrator2_IC ; real_T
 DiscreteTimeIntegrator1_gainval ; real_T DiscreteTimeIntegrator1_IC ; real_T
 DiscreteTimeIntegrator2_gainval_iujtnnssqz ; real_T
@@ -80,28 +80,28 @@ real_T forceX_bp01Data [ 50 ] ; real_T forceX_bp02Data [ 30 ] ; real_T
 forceY_tableData [ 1500 ] ; real_T forceY_bp01Data [ 50 ] ; real_T
 forceY_bp02Data [ 30 ] ; real_T WhiteNoise_Mean ; real_T WhiteNoise_StdDev ;
 real_T Output_Gain ; real_T DiscreteTimeIntegrator3_gainval ; real_T
-DiscreteTimeIntegrator3_IC ; real_T DataStoreMemory_InitialValue [ 194 ] ;
-real_T A_Value ; real_T celldim_Value [ 194 ] ; real_T celldim1_Value [ 194 ]
-; real_T permvec_Value [ 2 ] ; real_T B_Value ; real_T freeze_signal_Value [
-97 ] ; real_T ones_Value ; real_T reset_signal_Value [ 97 ] ; real_T
-mass_Value ; real_T zeros_Value [ 97 ] ; real_T ones_Value_oocx40lm3j ;
-real_T mass_Value_bobjrwbmcw ; real_T zeros_Value_cq0rpxk0gt [ 97 ] ; real_T
-Interactions_Value [ 194 ] ; uint32_T forceX_maxIndex [ 2 ] ; uint32_T
-forceY_maxIndex [ 2 ] ; } ; extern const char * RT_MEMORY_ALLOCATION_ERROR ;
-extern B rtB ; extern DW rtDW ; extern P rtP ; extern const
-rtwCAPI_ModelMappingStaticInfo * sl_pigle_main_current_GetCAPIStaticMap (
-void ) ; extern SimStruct * const rtS ; extern const int_T gblNumToFiles ;
-extern const int_T gblNumFrFiles ; extern const int_T gblNumFrWksBlocks ;
-extern rtInportTUtable * gblInportTUtables ; extern const char *
-gblInportFileName ; extern const int_T gblNumRootInportBlks ; extern const
-int_T gblNumModelInputs ; extern const int_T gblInportDataTypeIdx [ ] ;
-extern const int_T gblInportDims [ ] ; extern const int_T gblInportComplex [
-] ; extern const int_T gblInportInterpoFlag [ ] ; extern const int_T
-gblInportContinuous [ ] ; extern const int_T gblParameterTuningTid ; extern
-DataMapInfo * rt_dataMapInfoPtr ; extern rtwCAPI_ModelMappingInfo *
-rt_modelMapInfoPtr ; void MdlOutputs ( int_T tid ) ; void
-MdlOutputsParameterSampleTime ( int_T tid ) ; void MdlUpdate ( int_T tid ) ;
-void MdlTerminate ( void ) ; void MdlInitializeSizes ( void ) ; void
-MdlInitializeSampleTimes ( void ) ; SimStruct * raccel_register_model ( void
-) ;
+DiscreteTimeIntegrator3_IC ; real_T DataStoreMemory_InitialValue [ 20 ] ;
+real_T A_Value [ 4 ] ; real_T celldim_Value [ 20 ] ; real_T celldim1_Value [
+20 ] ; real_T permvec_Value [ 2 ] ; real_T B_Value [ 4 ] ; real_T
+freeze_signal_Value [ 10 ] ; real_T ones_Value [ 2 ] ; real_T
+reset_signal_Value [ 10 ] ; real_T mass_Value ; real_T zeros_Value [ 20 ] ;
+real_T ones_Value_oocx40lm3j [ 2 ] ; real_T mass_Value_bobjrwbmcw ; real_T
+zeros_Value_cq0rpxk0gt [ 20 ] ; real_T Interactions_Value [ 20 ] ; uint32_T
+forceX_maxIndex [ 2 ] ; uint32_T forceY_maxIndex [ 2 ] ; } ; extern const
+char * RT_MEMORY_ALLOCATION_ERROR ; extern B rtB ; extern DW rtDW ; extern P
+rtP ; extern const rtwCAPI_ModelMappingStaticInfo *
+sl_pigle_main_current_GetCAPIStaticMap ( void ) ; extern SimStruct * const
+rtS ; extern const int_T gblNumToFiles ; extern const int_T gblNumFrFiles ;
+extern const int_T gblNumFrWksBlocks ; extern rtInportTUtable *
+gblInportTUtables ; extern const char * gblInportFileName ; extern const
+int_T gblNumRootInportBlks ; extern const int_T gblNumModelInputs ; extern
+const int_T gblInportDataTypeIdx [ ] ; extern const int_T gblInportDims [ ] ;
+extern const int_T gblInportComplex [ ] ; extern const int_T
+gblInportInterpoFlag [ ] ; extern const int_T gblInportContinuous [ ] ;
+extern const int_T gblParameterTuningTid ; extern DataMapInfo *
+rt_dataMapInfoPtr ; extern rtwCAPI_ModelMappingInfo * rt_modelMapInfoPtr ;
+void MdlOutputs ( int_T tid ) ; void MdlOutputsParameterSampleTime ( int_T
+tid ) ; void MdlUpdate ( int_T tid ) ; void MdlTerminate ( void ) ; void
+MdlInitializeSizes ( void ) ; void MdlInitializeSampleTimes ( void ) ;
+SimStruct * raccel_register_model ( void ) ;
 #endif

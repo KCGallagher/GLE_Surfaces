@@ -58,7 +58,7 @@ figure; s = pcolor(x_values, y_values, potential'); s.EdgeColor = 'none';
 %surf or mesh are also possible here, however cover the trajectory at higher potentials
 colormap('gray');
 hold on
-plot(squeeze(data.prtcl.r(1,1,:)),squeeze(data.prtcl.r(2,1,:)),'Color',[1,0,0,0.5], 'Linewidth', 1)
+plot(squeeze(data.prtcl.r(1,1,:)),squeeze(data.prtcl.r(2,1,:)),'Color',[1,0,0,0.5], 'Linewidth', 2)
 hold off
 Ang = char(197);
 xlabel(['x displacement (' Ang ')']); ylabel(['y displacement (' Ang ')']); 

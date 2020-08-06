@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'sl_pigle_main_current'. 
 ## 
 ## Makefile     : sl_pigle_main_current.mk
-## Generated on : Mon Aug 03 17:08:50 2020
+## Generated on : Wed Aug 05 18:12:11 2020
 ##  version:  
 ## 
 ## Build Info:
@@ -29,7 +29,7 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2020a
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2020a/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = C:/Users/KitG/OneDrive/DOCUME~1/SURFAC~1/PIGLE-~1
+START_DIR                 = C:/Users/KitG/Documents/PIGLE-project
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 1

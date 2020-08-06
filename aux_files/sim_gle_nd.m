@@ -15,8 +15,8 @@ sim_name = 'sl_pigle_main_current'; % Name of the Simulink model on disk.
 seed_limit = 100000; % Upper limit for integer seed values.
 
 % Seed the rng.
-%rng('shuffle');
-rng(1);
+rng('shuffle');
+%rng(1);
 
 % set seed_values, seperate from params struct, to allow compilation(?)
 for j=1:n_parall_runs
