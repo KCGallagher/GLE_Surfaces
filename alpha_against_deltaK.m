@@ -2,8 +2,9 @@
 %exponential trend is clearer on shorter time scale, e.g. 
 
 %f2 = fit(params.t_isf',real(isf_inc_CoM(i,:,1))','exp1', 'Exclude', params.t_isf > 10); %exclude one end of x axis
-%For diffusive motion (fit to exp)
-if true
+
+%FOR DIFFUSIVE MOTION (fit to exp)
+if false
     coeff = zeros(1,length(dK)); %array for alpha parameter values
     for i = 1:length(dK)
         f_diff = fittype('A*exp(-B*x) + C', 'independent',{'x'},'coefficients',{'A','B','C'});
@@ -28,7 +29,7 @@ if true
     %legend('Simulation',caption,'Location','northwest')
 end
 
-%For ballistic motion (fit to gaussian)
+%FOR BALLISTIC MOITON (fit to gaussian)
 if false
     coeff = zeros(1,length(dK)); %array for alpha parameter values
     coeff(1) = NaN;
@@ -51,7 +52,7 @@ end
 
 %dK0 = dK; coeff0 = coeff; save('adK0', 'dK0', 'coeff0');
 
-if false
+if false %FOR COMPARING SAVED DATA
     load('adK0', 'dK0', 'coeff0'); load('adK1', 'dK1', 'coeff1');
 %     L=length(dK0); f = fit(dK0(round(L/4):L)',(coeff0(round(L/4):L))','poly1');
     L=length(dK0); f = fit(dK0',coeff0','poly1','Exclude', dK0 >8 );
@@ -67,4 +68,35 @@ if false
     caption = sprintf('y = %.3f x %.3f', coeff(1), coeff(2));
     legend('\tau = 1','\tau = 0',caption,'Location','northwest')
     set(gca,'FontSize',14) %use for subplots in latex report
+end
+
+if true  %COMPARISONS WITH DAVID WARD DATA
+    % openfig("LiPES"); %For exact value comparison 
+    % openfig("Li alphaDK"); %Data array more useful
+    % openfig("Li alphaDK_fast"); %Data array more useful
+
+%     load('kit.mat') % gives e, x, y as 16x1 vectors
+%     figure; errorbar(x,y,e,'bx');% Ang = char(197); title('Li alphaDK data')
+%     xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha (1/ps)'); 
+%     load('kit2.mat') % gives e2, x2, y2 as 10x1 vectors
+%     figure; errorbar(x2,y2,e2, 'bx'); Ang = char(197); title('Li alphaDK_fast data')
+%     xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha (1/ps)'); 
+    
+    
+    coeff = zeros(1,length(dK)); %array for alpha parameter values
+    for i = 1:length(dK)
+        f_diff = fittype('A*exp(-B*x) + C', 'independent',{'x'},'coefficients',{'A','B','C'});
+%         f = fit(params.t_isf',real(isf_inc_CoM(i,:,1))',f_diff, 'StartPoint', [1, 1, 0]); %exp1 works for fit type too
+        f = fit(params.t_isf',real(isf_inc_CoM(i,:,1))','exp1', 'StartPoint', [1, -1]); %exp1 works for fit type too
+        ith_coeff = coeffvalues(f); coeff(i) = -1 * ith_coeff(2); % for b in exp(-b)
+        if coeff(i) < 0 %displays curves with negative b (ie exponential growth)
+            figure; plot(f, params.t_isf',real(isf_inc_CoM(i,:,1))')
+        end
+    end
+    
+    load('kit.mat') % gives e, x, y as 16x1 vectors
+    figure; errorbar(x,y,e,'bx');% Ang = char(197); title('Li alphaDK data')
+    hold on; plot(dK, coeff, 'ro'); hold off
+    Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha (1/ps)')
+    %legend('Simulation',caption,'Location','northwest')
 end
