@@ -70,7 +70,7 @@ if false %FOR COMPARING SAVED DATA
     set(gca,'FontSize',14) %use for subplots in latex report
 end
 
-if true  %COMPARISONS WITH DAVID WARD DATA
+if false  %COMPARISONS WITH DAVID WARD DATA Fig c
     % openfig("LiPES"); %For exact value comparison 
     % openfig("Li alphaDK"); %Data array more useful
     % openfig("Li alphaDK_fast"); %Data array more useful
@@ -85,9 +85,9 @@ if true  %COMPARISONS WITH DAVID WARD DATA
     
     coeff = zeros(1,length(dK)); %array for alpha parameter values
     for i = 1:length(dK)
-        f_diff = fittype('A*exp(-B*x) + C', 'independent',{'x'},'coefficients',{'A','B','C'});
-%         f = fit(params.t_isf',real(isf_inc_CoM(i,:,1))',f_diff, 'StartPoint', [1, 1, 0]); %exp1 works for fit type too
-        f = fit(params.t_isf',real(isf_inc_CoM(i,:,1))','exp1', 'StartPoint', [1, -1]); %exp1 works for fit type too
+        f_diff = fittype('A*exp(B*x) + C', 'independent',{'x'},'coefficients',{'A','B','C'});
+%         f = fit(params.t_isf',real(isf_inc_CoM(i,:,1))','exp1', 'StartPoint', [1, -1]); %exp1 works for fit type too
+        f = fit(params.t_isf',real(isf_inc_CoM(i,:,1))',f_diff,'Lower', [0, -5, -1], 'Upper', [1, 0, 1], 'StartPoint', [1, -1, 0]); %exp1 works for fit type too
         ith_coeff = coeffvalues(f); coeff(i) = -1 * ith_coeff(2); % for b in exp(-b)
         if coeff(i) < 0 %displays curves with negative b (ie exponential growth)
             figure; plot(f, params.t_isf',real(isf_inc_CoM(i,:,1))')
@@ -97,6 +97,27 @@ if true  %COMPARISONS WITH DAVID WARD DATA
     load('kit.mat') % gives e, x, y as 16x1 vectors
     figure; errorbar(x,y,e,'bx');% Ang = char(197); title('Li alphaDK data')
     hold on; plot(dK, coeff, 'ro'); hold off
+    title('Figure 5.16c')
     Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha (1/ps)')
+    %legend('Simulation',caption,'Location','northwest')
+end
+
+if true  %COMPARISONS WITH DAVID WARD DATA    
+    coeff = zeros(4,length(dK)); %array for alpha parameter values
+    for i = 1:length(dK)
+        f_diff = fittype('A*exp(B*x) + C*exp( - x.^2 / (2 * D.^ 2))', 'independent',{'x'},'coefficients',{'A','B','C', 'D'});
+        f = fit(params.t_isf',real(isf_inc_CoM(i,:,1))',f_diff,'Lower', [0, -10, 0, 0], 'Upper', [10, 0, 10, 10], 'StartPoint', [1, -1, 1, 1]); %exp1 works for fit type too
+        coeff(:, i) = coeffvalues(f); 
+    end
+    
+    load('kit2.mat') % gives e, x, y as 16x1 vectors
+    figure; errorbar(x2,y2,e2,'bx');% Ang = char(197); title('Li alphaDK data')
+    hold on; plot(dK, -1.*coeff(2,:), 'ro'); hold off
+    title('Figure 5.16b')
+    Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha_2 (1/ps)')
+    
+    figure; plot(dK, (coeff(1,:)./coeff(3,:)) , 'ro')
+    title('Figure 5.16a')
+    Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('A_1 / A_2')
     %legend('Simulation',caption,'Location','northwest')
 end

@@ -5,7 +5,7 @@ Nprtcl_total = 1;
 mass_list = [7]; 
 radius = [0.2]; 
 number_density = [0.1];
-eta =2; % or [5 5]  for case5
+eta =5; % or [5 5]  for case5
 eta_theta = 6;
 tau = [0.8];
 
@@ -52,7 +52,7 @@ form_factor_hemisphere_radius = {repmat(2.5,r_conf_Natoms{1},2)};
 % populations), or as a cell-array (with the i'th element distributed to the i'th
 % population)
 %
-A_case = {2};
+A_case = {1};
 A_w0   = {eta};
 A_dw   = {1./tau};
 A_eta  = {eta};

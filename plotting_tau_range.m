@@ -20,7 +20,7 @@ load('tau0_sp', 'fulldata_tau0_sp', 'max_tau0_sp');
 
 % dK = [0 0.05 0.1 0.15 0.2:0.1:1 1.2:0.2:5];
 %Delta_k = dK(10); %same index as was used to obtain data CHANGE AS REQ
-Delta_k = 1 %1.3 matches the form of the data for 0.44 - factor of 3 greater
+Delta_k = 0.6; %1.3 matches the form of the data for 0.44 - factor of 3 greater
 
 % LE ANALYTICAL ISF
 %Comparision with the analytic form (for no potential)
@@ -34,7 +34,7 @@ isf_lowtime = exp( -(1/2) * (chi * eta * time_base).^2);
 isf_LE=exp(-Delta_k^2*(Boltzmann*T/(mass_list*eta^2))*(exp(-eta*time_base)+eta*time_base-1));
 
 % GLE ANALYTICAL ISF
-tau = 1; %to ensure wD is set correctly (workspace doesn't update tau unless run_pigle is ran)
+tau = 0.8; %to ensure wD is set correctly (workspace doesn't update tau unless run_pigle is ran)
 wD = 1 / tau; %cut off frequency
 C=wD-eta;
 S=sqrt(wD)*(wD-3*eta)/sqrt(wD-4*eta);
@@ -86,7 +86,7 @@ if false
 end
 
 % SIMULATION DATA PLOTTING
-if true
+if false
     figure; semilogx(time_base, isf_LE, '--k')
     hold on
     semilogx(time_base, isf_GLE, '--r')
@@ -129,3 +129,14 @@ if false
     xlabel('t / ps'); ylabel('Normalised Incoherent ISF'); title('Simulated ISF against Analytic Forms')
     legend('Exact LE Solution','Exact GLE Solution','Simulated LE','Simulated GLE, tau = 1e-3', 'Simulated GLE, tau = 1')
 end
+
+%FIGURE 5.18 COMPARISON
+if true
+   figure; semilogx(time_base, isf_LE, '--k')
+   hold on
+   %semilogx(time_base, isf_GLE, '--r')
+   semilogx(params.t_isf',real(isf_inc_CoM(1,:,1)))
+   hold off
+   xlabel('t / ps'); ylabel('Normalised Incoherent ISF'); title('LE Simulation, \eta = 5 (1/ps), \Delta K = 1 (1/Ang)')
+   legend('Exact LE Solution','Simulated Data'); xlim([0.15, 30]) 
+end    
