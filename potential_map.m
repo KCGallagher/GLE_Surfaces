@@ -1,3 +1,8 @@
+%Use one dK value
+%figure; s = pcolor(unitcell.x, unitcell.y, PotMatrix); s.EdgeColor ='none';  
+% For plotting a unit cell potential
+
+
 max_pos = max(data.prtcl.r, [], 3); %Max position in trajectory, per coordinate 
 min_pos = min(data.prtcl.r, [], 3);
 
@@ -65,7 +70,10 @@ xlabel(['x displacement (' Ang ')']); ylabel(['y displacement (' Ang ')']);
 c = colorbar; c.Label.String = ['Atomic Potential (amu ' Ang '^2 / ps^2)'];
 
 
-
+% figure; s = surf(unitcell.x, unitcell.y, PotMatrix); s.EdgeColor = 'none'; 
+% Ang = char(197); xlabel(['x axis (' Ang ')']); ylabel(['y axis (' Ang ')']); 
+% zlabel('Potential (eV)'); zlim([0 45]);
+%complete unit cell potential plot, remove conversion factor for eV units
 
 
 

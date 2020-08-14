@@ -10,9 +10,9 @@ pot_strct(1).ref_De = [1600 1600 1600 1600 1600 1600]*0;
 % pot_strct(1).V = [0 ; 0.5 ;  0.5; 250 ; 210 ; 60 ]*1; % top, slope1,slop2,bridge,hcp,fcc
 % pot_strct(1).V = [250 ; 0.5 ; 0.5 ; 110 ; 22 ; 0]; % top, slope1,slop2,bridge,hcp,fcc
 %pot_strct(1).V = [200 ; 0.1 ; 0.1 ; 5   ; 5  ;50]; %top,slope1,slop2,bridge,hcp,fcc DEFAULT
-pot_strct(1).V = [0;0;0;0;0;0]; % top, slope1,slop2,bridge,hcp,fcc, NO POTENTIAL
+%pot_strct(1).V = [0;0;0;0;0;0]; % top, slope1,slop2,bridge,hcp,fcc, NO POTENTIAL
 %pot_strct(1).V = [13;5;5;0;3;3]*9.649; % top, slope1,slop2,bridge,hcp,fcc, COPPER - WARD CODE
-%pot_strct(1).V = [45;13;13;0;9;9]; % top, slope1,slop2,bridge,hcp,fcc, COPPER - WARD THESIS
+pot_strct(1).V = [45;13;13;0;9;9]*9.649; % top, slope1,slop2,bridge,hcp,fcc, COPPER - WARD THESIS %45, 13, 9
 %This factor of 9.649 accounts for conversion from meV to amu Ag^2 ps^-2
 
 pot_strct(1).is_potval = [1 0 0 1 1 1];

@@ -8,7 +8,7 @@
 
 %Noise scales with number of particles but not number of runs
 if false
-    load('noise_for', 'ans')
+    load('noise_for1', 'ans')
     noise_forces= squeeze(ans.Data);
 %     y = 0:100:8000;
 %     f = sqrt(2/3.1415) .* 1./( 1 * tau^2 + y.^2)*1.7e5; %to add best fit line, but its not scaled
@@ -68,9 +68,9 @@ if false
     %set(gca,'XScale','log')
 end
 
-if true
-    load('noise_mom0', 'ans')
-    noise_data = squeeze(ans.Data);;% squeeze(ans.Data);
+if true  %MY FOURIER METHOD
+    load('noise_for1', 'ans')
+    noise_data = squeeze(ans.Data(2,:,:));% squeeze(ans.Data);
     T = sample_time;             % Sampling period       
     L = length(noise_data);      % Length of signal
     t = params.t_isf';        % Time vector
@@ -81,25 +81,27 @@ if true
     P1(2:end-1) = 2*P1(2:end-1);
 
     f = (0:(L/2))/(L * T);
-    
-    load('noise_mom1', 'ans')
-    noise_data1 = noise_impulse;% squeeze(ans.Data);
-    T = sample_time;             % Sampling period       
-    L = length(noise_data1);      % Length of signal
-    t = params.t_isf';        % Time vector
-    noise_freq1 = fft(noise_data1);
-
-    P2 = abs(noise_freq1/L); %two-sided spectrum
-    P1_1 = P2(1:L/2+1); %one-sided spectrum
-    P1_1(2:end-1) = 2*P1_1(2:end-1);
-
-    f_1 = (0:(L/2))/(L * T);
-    
-   
-    figure; semilogy(f,P1) 
-    hold on, semilogy(f_1,P1_1); hold off;
-    title('Fourier transform of Momentum Spectrum'); legend('\tau = 0', '\tau = 1');
+    figure; loglog(f,P1) 
+    title('Fourier transform of Momentum Spectrum');
     xlabel('Frequency (1/ps)'); ylabel('Power Spectrum')
 
     %figure; plot(noise_freq(1,:)) %Approx shapes
-end    
+end 
+
+if true % DAVIDS METHOD
+    load noise_for0.mat 
+    x=squeeze(ans.Data); 
+    n=length(x);
+    fs=1000; %sampling frequency
+    dt=1/fs; %sample period
+    t=(0:n-1)/fs;
+
+    figure; subplot(3,1,1); plot(t,x); title('\tau = 0 Force Timeseries')
+    subplot(3,1,2); histogram(x),title('Histogram of the Random Forces')
+
+    y=fft(x,n);
+    f = (0:n-1)*(fs/n);
+    pow=abs(y).^2/n;
+    subplot(3,1,3)
+    loglog(f(1:floor(n/2)),pow(1:floor(n/2))), title('Power Spectrum')
+end

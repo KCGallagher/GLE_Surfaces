@@ -90,18 +90,20 @@ end
 
 if true % DAVIDS METHOD
     load noise_for1.mat 
-    x=squeeze(ans.Data(2,1,:)); 
+    x=squeeze(ans.Data(2,:,:)); 
     n=length(x);
     fs=1000; %sampling frequency
     dt=1/fs; %sample period
     t=(0:n-1)/fs;
 
-    figure; subplot(3,1,1); plot(t,x); title('\tau = 0')
-    subplot(3,1,2); histogram(x),title('histogram of the random numbers')
-
+    figure; subplot(3,1,1); plot(t,x); title('\tau = 1 Force Timeseries')
+    Ang = char(197); ylabel(['Force (amu ' Ang '/ps^2)']); xlabel('Time (ps)'); 
+    subplot(3,1,2); histogram(x, 'EdgeColor' , 'none'),title('Histogram of the Random Forces')
+    xlabel(['Force (amu ' Ang '/ps^2)']); ylabel('Probability Density')
+    
     y=fft(x,n);
     f = (0:n-1)*(fs/n);
     pow=abs(y).^2/n;
     subplot(3,1,3)
-    loglog(f(1:floor(n/2)),pow(1:floor(n/2))), title('power spectrum')
+    loglog(f(1:floor(n/2)),pow(1:floor(n/2))), xlabel('Frequency (1/ps)'); ylabel('Magnitude');title('Power Spectrum')
 end

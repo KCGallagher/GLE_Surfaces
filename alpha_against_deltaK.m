@@ -70,7 +70,7 @@ if false %FOR COMPARING SAVED DATA
     set(gca,'FontSize',14) %use for subplots in latex report
 end
 
-if false  %COMPARISONS WITH DAVID WARD DATA Fig c
+if true  %COMPARISONS WITH DAVID WARD DATA Fig c
     % openfig("LiPES"); %For exact value comparison 
     % openfig("Li alphaDK"); %Data array more useful
     % openfig("Li alphaDK_fast"); %Data array more useful
@@ -80,8 +80,7 @@ if false  %COMPARISONS WITH DAVID WARD DATA Fig c
 %     xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha (1/ps)'); 
 %     load('kit2.mat') % gives e2, x2, y2 as 10x1 vectors
 %     figure; errorbar(x2,y2,e2, 'bx'); Ang = char(197); title('Li alphaDK_fast data')
-%     xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha (1/ps)'); 
-    
+%     xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha (1/ps)');  
     
     coeff = zeros(1,length(dK)); %array for alpha parameter values
     for i = 1:length(dK)
@@ -97,12 +96,12 @@ if false  %COMPARISONS WITH DAVID WARD DATA Fig c
     load('kit.mat') % gives e, x, y as 16x1 vectors
     figure; errorbar(x,y,e,'bx');% Ang = char(197); title('Li alphaDK data')
     hold on; plot(dK, coeff, 'ro'); hold off
-    title('Figure 5.16c')
+    %title('Figure 5.16c, \eta = 1, strong pot')
     Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha (1/ps)')
-    %legend('Simulation',caption,'Location','northwest')
+    legend('Experiment','Simulation','Location','northwest')
 end
 
-if true  %COMPARISONS WITH DAVID WARD DATA    
+if false  %COMPARISONS WITH DAVID WARD DATA    
     coeff = zeros(4,length(dK)); %array for alpha parameter values
     for i = 1:length(dK)
         f_diff = fittype('A*exp(B*x) + C*exp( - x.^2 / (2 * D.^ 2))', 'independent',{'x'},'coefficients',{'A','B','C', 'D'});
@@ -115,7 +114,7 @@ if true  %COMPARISONS WITH DAVID WARD DATA
     hold on; plot(dK, -1.*coeff(2,:), 'ro'); hold off
     title('Figure 5.16b')
     Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha_2 (1/ps)')
-    
+
     figure; plot(dK, (coeff(1,:)./coeff(3,:)) , 'ro')
     title('Figure 5.16a')
     Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('A_1 / A_2')

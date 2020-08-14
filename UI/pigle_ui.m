@@ -39,7 +39,7 @@ sample_time = 1e-3;
 sample_time_clist = 1e-3;
 isf_sample_time = 1e-2;
 thermalizing_time = 50;
-stop_time = 1024*2;
+stop_time = 2e-2; %For DWard sim
 
 % N_steps and N_ISF_steps are calculated after PIGLE adjusts the requested time parameters
 max_N_steps = 1e9;
