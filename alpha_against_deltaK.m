@@ -70,7 +70,7 @@ if false %FOR COMPARING SAVED DATA
     set(gca,'FontSize',14) %use for subplots in latex report
 end
 
-if true  %COMPARISONS WITH DAVID WARD DATA Fig c
+if false  %COMPARISONS WITH DAVID WARD DATA Fig c
     % openfig("LiPES"); %For exact value comparison 
     % openfig("Li alphaDK"); %Data array more useful
     % openfig("Li alphaDK_fast"); %Data array more useful
@@ -101,7 +101,7 @@ if true  %COMPARISONS WITH DAVID WARD DATA Fig c
     legend('Experiment','Simulation','Location','northwest')
 end
 
-if false  %COMPARISONS WITH DAVID WARD DATA    
+if false  %COMPARISONS WITH DAVID WARD DATA  - google chat version  
     coeff = zeros(4,length(dK)); %array for alpha parameter values
     for i = 1:length(dK)
         f_diff = fittype('A*exp(B*x) + C*exp( - x.^2 / (2 * D.^ 2))', 'independent',{'x'},'coefficients',{'A','B','C', 'D'});
@@ -112,11 +112,39 @@ if false  %COMPARISONS WITH DAVID WARD DATA
     load('kit2.mat') % gives e, x, y as 16x1 vectors
     figure; errorbar(x2,y2,e2,'bx');% Ang = char(197); title('Li alphaDK data')
     hold on; plot(dK, -1.*coeff(2,:), 'ro'); hold off
-    title('Figure 5.16b')
+    title('Figure 5.16b, \tau = 0.04')
     Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha_2 (1/ps)')
 
-    figure; plot(dK, (coeff(1,:)./coeff(3,:)) , 'ro')
-    title('Figure 5.16a')
-    Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('A_1 / A_2')
+%     figure; plot(dK, (coeff(1,:)./coeff(3,:)) , 'ro')
+%     title('Figure 5.16a')
+%     Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('A_1 / A_2')
     %legend('Simulation',caption,'Location','northwest')
+end
+
+if true  %COMPARISONS WITH DAVID WARD DATA - thesis version  
+    %time = params.t_isf'; isf = real(isf_inc_CoM(:,:,1))'; %to use recently generated data
+    load('isf_data', 'time', 'isf'); isf = isf'; %to use saved data
+    coeff = zeros(4,length(dK)); %array for alpha parameter values  %change 2 or 4 depending on f_diff
+    for i = 1:length(dK)
+        f_long = fittype('A*exp(B*x) + C', 'independent',{'x'},'coefficients',{'A','B','C'});
+        f = fit(time,isf(:,i),f_long,'Lower', [0, -5, -1], 'Upper', [1, 0, 1], 'StartPoint', [1, -1, 0], 'Exclude', time<1.8); 
+        best_fit = feval(f, time);
+        f_diff = fittype('A*exp(B*x) + C*exp( - x.^2 / (2 * D.^ 2))', 'independent',{'x'},'coefficients',{'A','B','C', 'D'});
+        f2 = fit(time,(isf(:,i)-best_fit),f_diff,'Lower', [0, -10, 0, 0], 'Upper', [10, 0, 10, 10], 'StartPoint', [0.1, -0.1, 1, 0.1]); 
+%         f_diff_e = fittype('A*exp(B*x)', 'independent',{'x'},'coefficients',{'A','B'});
+%         f2 = fit(time,(isf(:,i)-best_fit),f_diff_e,'Lower', [0, -10], 'Upper', [10, 0], 'StartPoint', [1, -1]); 
+        coeff(:, i) = coeffvalues(f2); 
+    end
+    
+    %coeff_user = zeros(2,length(dK)); %Filled in through user altered fitting procedures
+    %Adjust excluded parts as necessary, and iterate through i values
+%     i=1; f = fit(time,isf(:,i),f_long,'Lower', [0, -5, -1], 'Upper', [1, 0, 1], 'StartPoint', [1, -1, 0], 'Exclude', time<1.4); figure; plot(f, time, isf(:,i));
+% best_fit = feval(f, time);f2 = fit(time,(isf(:,i)-best_fit),f_diff_e,'Lower', [0, -10], 'Upper', [10, 0], 'StartPoint', [1, -1]); figure; plot(f2, time,(isf(:,i)-best_fit));
+    %coeff_user(:, i) = coeffvalues(f2); 
+    
+    load('kit2.mat') % gives e, x, y as 16x1 vectors
+    figure; errorbar(x2,y2,e2,'bx');% Ang = char(197); title('Li alphaDK data')
+    hold on; plot(dK, -1.*coeff(2,:), 'ro'); hold off
+    %title('Figure 5.16b, \tau = 0.8')
+    Ang = char(197); xlabel(['\Delta K (1/' Ang ')']); ylabel('\alpha_2 (1/ps)'); legend('Experiment', 'Simulation', 'Location','northeast');
 end
