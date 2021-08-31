@@ -1,4 +1,4 @@
-% % Taken from PIGLE downloaded from GITHUB repo
+% % Taken from PIGLE downloaded from GITHUB repo https://zenodo.org/record/2025809#.YS6ciHySlPY
 % Copyright (c) 2018, Nadav Avidor.
 % All rights reserved.
 % This file is part of the PIGLE - Particles Interacting in Generalized Langevin Equation simulator, subject to the 
@@ -6,31 +6,27 @@
 
 PIGLE - Particles Interacting in Generalized Langevin Equation simulator
 Release: 1.0rc1 (a - alpha , b - beta, rc - release candidate)
-Please cite PIGLE software using doi:// xxxx
 
 PIGLE simulator solves the Generalized Langevin Equation for interacting particles, in a 4D potential energy surface.
 The potential has up to 3 spatial dimensions, and a rigid-body like rotation. Particles doesn't neceseraly share the
-same properties (such as mass or friction). When the third spatial dimension ('z') is enabled, the user can choose 
-either constant pressure (where desorbing particles re-appear at the system), or in simple mode where desorbing particles
-are being frozen for later filtration. However, currently there is not much physical use for that feature, and it might
-be removed in future releases. Following the calculation of the particles trajectories, each particle (center of mass)
-can be replaced with a configuration of particles, for example an eight memeber ring of equally contributing scattering
-centers. Such an approach allows the calculations of the intermediate scattering function with a less simplified
-representation of the molecular form factor, and also allows to visualize rotations.
+same properties (such as mass or friction). 
+
+Here, I consider specifically the motion line-shape in the intermediate scattering function, particularly in the ballistic
+region (i.e. over timescales shorter than the friction timescale), is considered for the Li/ Cu (111) system.
 
 ####################
-# Getting started: #
+# Basic Usage: #
 ####################
 
 Installation:
 -------------
-- Install Matlab (tested with 2017b). If working under Linux, make sure to obtain a supported version of a supported comipiler.
+- Install Matlab (tested with 2017b). 
 - Edit prep_environment.m
 
 Execution of jobs:
 ------------------
 - Create a potential of your choise and save it as 'mat' file, or create a function which generates the potential.
-  One can use the functions and scripts in the subfolder generatePES.
+  One can use the functions and scripts in the subfolder generatePES - I have configured a potential for the Copper (111) surface.
 - Configure the parameters in m-files under the subfolder UI.
 - Run 'run_pigle.m'
 
@@ -44,7 +40,7 @@ PIGLE support parallel computing (via matlab/Simulink support).
 
 
 ####################
-# List of Files:   #
+# List of PIGLE Files:   #
 ####################
 
 PIGLE:
@@ -72,6 +68,11 @@ config_job.m  config_job_params.m  pigle_run_single_task.m  pigle_shell_params.m
 
 ./UI:
 pigle_ui.m  pigle_ui_surface_params.m  pigle_wrapper_params.m
+
+
+####################
+# List of Analysis Files:   #
+####################
 
 
 
