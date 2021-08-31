@@ -1,5 +1,5 @@
 % % Taken from PIGLE downloaded from GITHUB repo https://zenodo.org/record/2025809#.YS6ciHySlPY
-% Copyright (c) 2018, Nadav Avidor.
+% Copyright (c) 2018, Nadav Avidor (NA).
 % All rights reserved.
 % This file is part of the PIGLE - Particles Interacting in Generalized Langevin Equation simulator, subject to the 
 % GNU/GPL-3.0-or-later.
@@ -11,8 +11,9 @@ PIGLE simulator solves the Generalized Langevin Equation for interacting particl
 The potential has up to 3 spatial dimensions, and a rigid-body like rotation. Particles doesn't neceseraly share the
 same properties (such as mass or friction). 
 
-Here, I consider specifically the motion line-shape in the intermediate scattering function, particularly in the ballistic
-region (i.e. over timescales shorter than the friction timescale), is considered for the Li/ Cu (111) system.
+Here, I (KG) consider specifically the motion line-shape in the intermediate scattering function (ISF), supervised by Dr David Ward.
+I particularly focus on the ballistic region (i.e. over timescales shorter than the friction timescale), for the Li/ Cu (111) system. 
+The simulink framework is adapted to include a noise filter, initially implemented as a low pass filter.
 
 ####################
 # Basic Usage: #
@@ -40,7 +41,7 @@ PIGLE support parallel computing (via matlab/Simulink support).
 
 
 ####################
-# List of PIGLE Files:   #
+# List of PIGLE Files (NA):   #
 ####################
 
 PIGLE:
@@ -71,8 +72,18 @@ pigle_ui.m  pigle_ui_surface_params.m  pigle_wrapper_params.m
 
 
 ####################
-# List of Analysis Files:   #
+# List of Analysis Files (KG):   #
 ####################
+
+./analysis_code:
+    alpha_against_deltak - Plots fitting parameter alpha (ballistic exponential decay constant) over different incoming wavevectors
+                         - Able to plot comparison with experimental data (kindly provided by Dr David Ward)
+    noise_histogram      - Extracts the noise in real and fourier space from the simulink framework, and characterises noise attributes
+    plotting_tau_range   - Comparison of simulated and analytic ISF plots for a range of cut-off frequencies in the low-pass noise filter
+    potential_map        - Plots trajecotry of single particle in real space, superimposed over periodic potential surface 
+
+./figures - Contains high resolution versions of all figures used in the report, as well as pdf copies of the complete and shortened reports.
+
 
 
 
