@@ -77,17 +77,17 @@ pigle_ui.m  pigle_ui_surface_params.m  pigle_wrapper_params.m
 
 ./analysis_code:
 
-    alpha_against_deltak - Plots fitting parameter alpha (ballistic exponential decay constant) over different incoming wavevectors
-                         - Able to plot comparison with experimental data (kindly provided by Dr David Ward)
+alpha_against_deltak - Plots fitting parameter alpha (ballistic exponential decay constant) over different incoming wavevectors
+                     - Able to plot comparison with experimental data (kindly provided by Dr David Ward)
+                     
+noise_histogram      - Extracts the noise in real and fourier space from the simulink framework, and characterises noise attributes
 
-    noise_histogram      - Extracts the noise in real and fourier space from the simulink framework, and characterises noise attributes
+plotting_tau_range   - Comparison of simulated and analytic ISF plots for a range of cut-off frequencies in the low-pass noise filter
 
-    plotting_tau_range   - Comparison of simulated and analytic ISF plots for a range of cut-off frequencies in the low-pass noise filter
-
-    potential_map        - Plots trajectory of single particle in real space, superimposed over periodic potential surface 
+potential_map        - Plots trajectory of single particle in real space, superimposed over periodic potential surface 
 
 
-./figures - Contains high resolution versions of all figures used in the report, as well as pdf copies of the complete and shortened reports.
+./figures: Contains high resolution versions of all figures used in the report, as well as pdf copies of the complete and shortened reports.
 
 
 
